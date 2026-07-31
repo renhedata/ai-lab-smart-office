@@ -22,7 +22,10 @@ description: 网络与弱电设计、实施和验收的文档入口。
 | 传感器 | `SEN-区域-用途-序号` | `SEN-MEET-CO2-01` |
 | 灯控 | `LGT-区域-回路` | `LGT-OPEN-A` |
 
+## 智能化网络扩展提案
+
+[智能化总体方案](/implementation/smart-office-plan)建议新增 VLAN 30 承载 Home Assistant、MQTT 和协议网关，现有 VLAN 20 继续承载 IoT 终端。该网段目前属于设计提案，不代表已在 CCR 和交换机中实施；须完成地址、DHCP、防火墙和回退方案评审后再变更现场网络。
+
 ## 验收证据
 
 对每一项网络改造，保存端口标签照片、布线测试结果、配置备份版本、覆盖测试和对应 Issue 链接。
-

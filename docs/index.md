@@ -35,6 +35,7 @@ features:
 | 明确范围、目标和阶段 | [项目总览](/guide/project-overview) |
 | 查看空间布局和功能分区 | [办公室布局](/guide/office-layout) |
 | 规划网络、弱电与平台关系 | [系统架构](/guide/architecture) |
+| 规划自动灯、窗帘和环境联动 | [智能化总体方案](/implementation/smart-office-plan) |
 | 新增或推进一项工程工作 | [协作与变更流程](/guide/workflow) |
 | 采购设备、维护资产信息 | [采购与设备台账](/management/procurement) |
 | 联调与交付现场系统 | [施工与验收](/management/acceptance) |

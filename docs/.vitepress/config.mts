@@ -41,6 +41,7 @@ export default defineConfig({
           text: '实施与运维',
           items: [
             { text: '网络与弱电', link: '/implementation/network' },
+            { text: '智能化总体方案', link: '/implementation/smart-office-plan' },
             { text: '自动化场景', link: '/implementation/automation' },
           ],
         },
