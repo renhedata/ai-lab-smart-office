@@ -1,0 +1,424 @@
+<!DOCTYPE html><html lang="zh-CN" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-vdxcvpsm"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>智能化总体方案 | AI实验室 · 智能办公室</title><link rel="canonical" href="https://renhedata.github.io/ai-lab-smart-office/implementation/smart-office-plan/"/><link rel="sitemap" href="/ai-lab-smart-office/sitemap-index.xml"/><link rel="shortcut icon" href="/ai-lab-smart-office/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v7.1.6"/><meta name="generator" content="Starlight v0.41.5"/><meta property="og:title" content="智能化总体方案"/><meta property="og:type" content="article"/><meta property="og:url" content="https://renhedata.github.io/ai-lab-smart-office/implementation/smart-office-plan/"/><meta property="og:locale" content="zh-CN"/><meta property="og:description" content="基于办公室平面布局的自动照明、自动窗帘、环境、空调、能耗与安全联动方案。"/><meta property="og:site_name" content="AI实验室 · 智能办公室"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="基于办公室平面布局的自动照明、自动窗帘、环境、空调、能耗与安全联动方案。"/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg aria-hidden="true" class="dark astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg aria-hidden="true" class="auto astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></template><link rel="stylesheet" href="/ai-lab-smart-office/_astro/print.ehPL0gv-.css" media="print"><link rel="stylesheet" href="/ai-lab-smart-office/_astro/common.3y5H_jd2.css"><script type="module" src="/ai-lab-smart-office/_astro/page.LAbJoB63.js"></script></head><body class="astro-vdxcvpsm"><a class="sl-skip-link astro-vxeigawq" href="#_top">跳转到内容</a><div class="page sl-flex astro-gqpr5s5a"><header class="header astro-gqpr5s5a"><div class="header astro-nczgtkxc"><div class="title-wrapper sl-flex astro-nczgtkxc"><a href="/ai-lab-smart-office/" class="site-title sl-flex astro-clw6ags5"><img class="astro-clw6ags5" alt src="/ai-lab-smart-office/_astro/logo.De_vJAVc.svg" width="128" height="128"><span class="astro-clw6ags5" translate="no">AI实验室 · 智能办公室</span></a></div><div class="sl-flex print:hidden astro-nczgtkxc"><site-search class="astro-nczgtkxc astro-r5ar4xm7" data-translations="{&quot;placeholder&quot;:&quot;搜索&quot;}"><button data-open-modal disabled aria-label="搜索" aria-keyshortcuts="Control+K" class="astro-r5ar4xm7"><svg aria-hidden="true" class="astro-r5ar4xm7 astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg><span class="sl-hidden md:sl-block astro-r5ar4xm7" aria-hidden="true">搜索</span><kbd class="sl-hidden md:sl-flex astro-r5ar4xm7" style="display: none;"><kbd class="astro-r5ar4xm7">Ctrl</kbd><kbd class="astro-r5ar4xm7">K</kbd></kbd></button><dialog style="padding:0" aria-label="搜索" class="astro-r5ar4xm7"><div class="dialog-frame sl-flex astro-r5ar4xm7"><button data-close-modal class="sl-flex md:sl-hidden astro-r5ar4xm7">取消</button><div class="search-container astro-r5ar4xm7"><div id="starlight__search" class="astro-r5ar4xm7"></div></div></div></dialog></site-search><script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script><script type="module" src="/ai-lab-smart-office/_astro/Search.astro_astro_type_script_index_0_lang.Bww8J2VE.js"></script></div><div class="sl-hidden md:sl-flex print:hidden right-group astro-nczgtkxc"><div class="sl-flex social-icons astro-nczgtkxc"><a href="https://github.com/renhedata/ai-lab-smart-office" rel="me" class="sl-flex astro-cg55etiy"><span class="sr-only astro-cg55etiy">GitHub</span><svg aria-hidden="true" class="astro-cg55etiy astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg></a></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-r2p65idu"><span class="sr-only astro-r2p65idu">选择主题</span><svg aria-hidden="true" class="icon label-icon astro-r2p65idu astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-r2p65idu"><option value="dark" class="astro-r2p65idu">深色</option><option value="light" class="astro-r2p65idu">浅色</option><option value="auto" selected class="astro-r2p65idu">自动</option></select><svg aria-hidden="true" class="icon caret astro-r2p65idu astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script><script type="module">var e=`starlight-theme`,t=e=>e===`auto`||e===`dark`||e===`light`?e:`auto`,n=()=>t(typeof localStorage<`u`&&localStorage.getItem(e));function r(t){typeof localStorage<`u`&&localStorage.setItem(e,t===`light`||t===`dark`?t:``)}var i=()=>matchMedia(`(prefers-color-scheme: light)`).matches?`light`:`dark`;function a(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e===`auto`?i():e,r(e)}matchMedia(`(prefers-color-scheme: light)`).addEventListener(`change`,()=>{n()===`auto`&&a(`auto`)});var o=class extends HTMLElement{constructor(){super(),a(n()),this.querySelector(`select`)?.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&a(t(e.currentTarget.value))})}};customElements.define(`starlight-theme-select`,o);</script><script type="module">var e=class extends HTMLElement{constructor(){super();let e=this.querySelector(`select`);e&&(e.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=e.currentTarget.value)}),window.addEventListener(`pageshow`,t=>{if(!t.persisted)return;let n=e.querySelector(`option[selected]`)?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}};customElements.define(`starlight-lang-select`,e);</script></div></div></header><nav class="sidebar print:hidden astro-gqpr5s5a" aria-label="主要"><starlight-menu-button class="print:hidden astro-vvx7mffu"><button aria-expanded="false" aria-label="菜单" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-vvx7mffu"><svg aria-hidden="true" class="open-menu astro-vvx7mffu astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg><svg aria-hidden="true" class="close-menu astro-vvx7mffu astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg></button></starlight-menu-button><script type="module">var e=class extends HTMLElement{btn=this.querySelector(`button`);constructor(){super(),this.btn.addEventListener(`click`,()=>this.toggleExpanded());let e=this.closest(`nav`);e&&e.addEventListener(`keyup`,e=>this.closeOnEscape(e)),matchMedia(`(min-width: 50em)`).addEventListener(`change`,()=>this.setExpanded(!1))}setExpanded(e){this.setAttribute(`aria-expanded`,String(e)),document.body.toggleAttribute(`data-mobile-menu-expanded`,e),document.querySelectorAll(`.main-frame, .sl-skip-link`).forEach(t=>{t.toggleAttribute(`inert`,e)})}toggleExpanded(){this.setExpanded(this.getAttribute(`aria-expanded`)!==`true`)}closeOnEscape(e){e.code===`Escape`&&(this.setExpanded(!1),this.btn.focus())}};customElements.define(`starlight-menu-button`,e);</script><div id="starlight__sidebar" class="sidebar-pane astro-gqpr5s5a"><div class="sidebar-content sl-flex astro-gqpr5s5a"><sl-sidebar-state-persist data-hash="1bi85t8" class="astro-f5yvicm7"><script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script><ul class="top-level astro-ojxuodky"><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">快速开始</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="0"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/ai-lab-smart-office/guide/getting-started/" class="astro-ojxuodky"><span class="astro-ojxuodky">使用指南</span></a></li><li class="astro-ojxuodky"><a href="/ai-lab-smart-office/guide/project-overview/" class="astro-ojxuodky"><span class="astro-ojxuodky">项目总览</span></a></li></ul></details></li><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">规划设计</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="1"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/ai-lab-smart-office/guide/office-layout/" class="astro-ojxuodky"><span class="astro-ojxuodky">办公室布局</span></a></li><li class="astro-ojxuodky"><a href="/ai-lab-smart-office/implementation/smart-office-plan/" aria-current="page" class="astro-ojxuodky"><span class="astro-ojxuodky">智能化总体方案</span></a></li><li class="astro-ojxuodky"><a href="/ai-lab-smart-office/implementation/network/" class="astro-ojxuodky"><span class="astro-ojxuodky">网络与弱电规划</span></a></li></ul></details></li><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">实施交付</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="2"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/ai-lab-smart-office/implementation/automation/" class="astro-ojxuodky"><span class="astro-ojxuodky">自动化场景</span></a></li><li class="astro-ojxuodky"><a href="/ai-lab-smart-office/management/procurement/" class="astro-ojxuodky"><span class="astro-ojxuodky">采购与设备台账</span></a></li><li class="astro-ojxuodky"><a href="/ai-lab-smart-office/management/acceptance/" class="astro-ojxuodky"><span class="astro-ojxuodky">施工与验收</span></a></li></ul></details></li><li class="astro-ojxuodky"><details open class="astro-ojxuodky"><summary class="astro-ojxuodky"><span class="group-label astro-ojxuodky"><span class="large astro-ojxuodky">运行维护</span></span><svg aria-hidden="true" class="caret astro-ojxuodky astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="3"></sl-sidebar-restore><ul class="astro-ojxuodky"><li class="astro-ojxuodky"><a href="/ai-lab-smart-office/guide/architecture/" class="astro-ojxuodky"><span class="astro-ojxuodky">当前网络现状</span></a></li><li class="astro-ojxuodky"><a href="/ai-lab-smart-office/guide/workflow/" class="astro-ojxuodky"><span class="astro-ojxuodky">协作与变更流程</span></a></li><li class="astro-ojxuodky"><a href="/ai-lab-smart-office/guide/decision-log/" class="astro-ojxuodky"><span class="astro-ojxuodky">决策记录</span></a></li></ul></details></li></ul><script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script></sl-sidebar-state-persist><div class="md:sl-hidden"><div class="mobile-preferences sl-flex astro-b5gddk54"><div class="social-icons astro-b5gddk54"><a href="https://github.com/renhedata/ai-lab-smart-office" rel="me" class="sl-flex astro-cg55etiy"><span class="sr-only astro-cg55etiy">GitHub</span><svg aria-hidden="true" class="astro-cg55etiy astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg></a></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-r2p65idu"><span class="sr-only astro-r2p65idu">选择主题</span><svg aria-hidden="true" class="icon label-icon astro-r2p65idu astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-r2p65idu"><option value="dark" class="astro-r2p65idu">深色</option><option value="light" class="astro-r2p65idu">浅色</option><option value="auto" selected class="astro-r2p65idu">自动</option></select><svg aria-hidden="true" class="icon caret astro-r2p65idu astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script></div></div></div></div></nav><div class="main-frame astro-gqpr5s5a"><script type="module">var e=document.getElementById(`starlight__sidebar`),t=e?.querySelector(`sl-sidebar-state-persist`),n=`sl-sidebar-state`,r=()=>{let r=[],i=t?.dataset.hash||``;try{let e=sessionStorage.getItem(n),t=JSON.parse(e||`{}`);Array.isArray(t.open)&&t.hash===i&&(r=t.open)}catch{}return{hash:i,open:r,scroll:e?.scrollTop||0}},i=e=>{try{sessionStorage.setItem(n,JSON.stringify(e))}catch{}},a=()=>i(r()),o=(e,t)=>{let n=r();n.open[t]=e,i(n)};t?.addEventListener(`click`,e=>{if(!(e.target instanceof Element))return;let t=e.target.closest(`summary`)?.closest(`details`);if(!t)return;let n=t.querySelector(`sl-sidebar-restore`),r=parseInt(n?.dataset.index||``);isNaN(r)||o(!t.open,r)}),addEventListener(`visibilitychange`,()=>{document.visibilityState===`hidden`&&a()});</script><div class="lg:sl-flex astro-abfeecmu"><aside class="right-sidebar-container print:hidden astro-abfeecmu"><div class="right-sidebar astro-abfeecmu"><div class="lg:sl-hidden astro-q5mffni3"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-5ulgm6bh"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-5ulgm6bh"><details id="starlight__mobile-toc" class="astro-5ulgm6bh"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-5ulgm6bh"><span class="toggle sl-flex astro-5ulgm6bh">本页内容<svg aria-hidden="true" class="caret astro-5ulgm6bh astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></span><span class="display-current astro-5ulgm6bh"></span></summary><div class="dropdown astro-5ulgm6bh"><ul class="isMobile astro-cxyftcne" style="--depth: 0;"><li style="--depth: 0;" class="astro-cxyftcne"><a href="#_top" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">概述</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#方案结论" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">方案结论</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#技术架构" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">技术架构</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#分区设计" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">分区设计</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#初步设备规模" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">初步设备规模</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#首轮试点范围" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">首轮试点范围</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#自动灯设计" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">自动灯设计</span></a><ul class="isMobile astro-cxyftcne" style="--depth: 1;"><li style="--depth: 1;" class="astro-cxyftcne"><a href="#控制逻辑" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">控制逻辑</span></a></li><li style="--depth: 1;" class="astro-cxyftcne"><a href="#施工要求" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">施工要求</span></a></li></ul></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#自动窗帘设计" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">自动窗帘设计</span></a><ul class="isMobile astro-cxyftcne" style="--depth: 1;"><li style="--depth: 1;" class="astro-cxyftcne"><a href="#分区原则" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">分区原则</span></a></li><li style="--depth: 1;" class="astro-cxyftcne"><a href="#控制与安全" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">控制与安全</span></a></li></ul></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#环境空调和能耗" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">环境、空调和能耗</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#网络与安全" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">网络与安全</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#实施阶段" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">实施阶段</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#方案冻结前必须确认" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">方案冻结前必须确认</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#技术参考" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">技术参考</span></a></li></ul></div></details></nav></mobile-starlight-toc><script type="module" src="/ai-lab-smart-office/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.BcSo_yiZ.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-q5mffni3"><div class="sl-container astro-q5mffni3"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">本页内容</h2><ul class="astro-cxyftcne" style="--depth: 0;"><li style="--depth: 0;" class="astro-cxyftcne"><a href="#_top" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">概述</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#方案结论" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">方案结论</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#技术架构" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">技术架构</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#分区设计" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">分区设计</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#初步设备规模" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">初步设备规模</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#首轮试点范围" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">首轮试点范围</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#自动灯设计" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">自动灯设计</span></a><ul class="astro-cxyftcne" style="--depth: 1;"><li style="--depth: 1;" class="astro-cxyftcne"><a href="#控制逻辑" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">控制逻辑</span></a></li><li style="--depth: 1;" class="astro-cxyftcne"><a href="#施工要求" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">施工要求</span></a></li></ul></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#自动窗帘设计" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">自动窗帘设计</span></a><ul class="astro-cxyftcne" style="--depth: 1;"><li style="--depth: 1;" class="astro-cxyftcne"><a href="#分区原则" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">分区原则</span></a></li><li style="--depth: 1;" class="astro-cxyftcne"><a href="#控制与安全" style="--depth: 1;" class="astro-cxyftcne"><span style="--depth: 1;" class="astro-cxyftcne">控制与安全</span></a></li></ul></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#环境空调和能耗" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">环境、空调和能耗</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#网络与安全" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">网络与安全</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#实施阶段" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">实施阶段</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#方案冻结前必须确认" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">方案冻结前必须确认</span></a></li><li style="--depth: 0;" class="astro-cxyftcne"><a href="#技术参考" style="--depth: 0;" class="astro-cxyftcne"><span style="--depth: 0;" class="astro-cxyftcne">技术参考</span></a></li></ul></nav></starlight-toc><script type="module" src="/ai-lab-smart-office/_astro/TableOfContents.astro_astro_type_script_index_0_lang.Csloo1VZ.js"></script></div></div></div></aside><div class="main-pane astro-abfeecmu"><main data-pagefind-body class="astro-vdxcvpsm" lang="zh-CN" dir="ltr"><div class="content-panel astro-oil7k7jf"><div class="sl-container astro-oil7k7jf"><h1 id="_top" class="astro-2sm4b3ln">智能化总体方案</h1></div></div><div class="content-panel astro-oil7k7jf"><div class="sl-container astro-oil7k7jf"><div class="sl-markdown-content"><div class="sl-heading-wrapper level-h2"><h2 id="方案结论">方案结论</h2><a class="sl-anchor-link" href="#方案结论"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “方案结论”</span></a></div>
+<p>本项目建议采用 <strong>有线控制骨干 + 低功耗无线传感器 + 本地自动化平台</strong> 的混合架构：固定安装且影响办公连续性的灯光、窗帘和空调使用 DALI-2、KNX 或 Modbus 等有线方式；人体存在、温湿度和门磁等辅助传感器可使用 Zigbee；所有场景由机房内的 Home Assistant 统一编排。</p>
+<p><img src="/ai-lab-smart-office/smart-control-architecture.svg" alt="AI实验室本地自动化控制架构"></p>
+<p>设计目标不是“所有设备都能在手机上点”，而是做到：</p>
+<ol>
+<li>有人且照度不足时自动亮灯，无人后分级关闭。</li>
+<li>窗帘根据日照、眩光、室温和会议场景自动调整。</li>
+<li>手动开关始终可用，并在一段时间内覆盖自动规则。</li>
+<li>平台或网络故障时，灯光、窗帘和空调仍可本地操作。</li>
+<li>所有设备状态、告警、能耗和自动化执行结果可以追溯。</li>
+</ol>
+<div class="sl-heading-wrapper level-h2"><h2 id="技术架构">技术架构</h2><a class="sl-anchor-link" href="#技术架构"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “技术架构”</span></a></div>
+<table>
+<thead>
+<tr>
+<th>子系统</th>
+<th>推荐方案</th>
+<th>改造兼容方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>照明</td>
+<td>可更换驱动的灯具使用 DALI-2，按灯具或逻辑组调光</td>
+<td>保留原灯具时，在配电箱或检修区使用有线继电器/调光模块控制回路</td>
+</tr>
+<tr>
+<td>窗帘</td>
+<td>交流管状电机或开合帘电机，控制器必须具备正反转互锁</td>
+<td>无反馈电机可按运行时间估算位置，但验收时须校准全开/全关时间</td>
+</tr>
+<tr>
+<td>传感器</td>
+<td>开放区、会议室和餐厅采用有线存在+照度传感器</td>
+<td>独立办公室和辅助空间可使用 Zigbee 存在、门磁和环境传感器</td>
+</tr>
+<tr>
+<td>空调/新风</td>
+<td>优先使用原厂网关、BACnet、KNX 或 Modbus 接口</td>
+<td>没有开放接口时仅做状态监测；红外控制只用于非关键房间</td>
+</tr>
+<tr>
+<td>自动化平台</td>
+<td>机房部署 Home Assistant、MQTT、Zigbee2MQTT，接 UPS</td>
+<td>Node-RED 仅用于复杂流程，不作为简单开关的唯一控制路径</td>
+</tr>
+<tr>
+<td>网络</td>
+<td>建议新增 VLAN 30 承载自动化服务，IoT 设备继续使用 VLAN 20</td>
+<td>暂不新增 VLAN 时，平台可先放受控服务器区并通过防火墙访问 VLAN 20</td>
+</tr>
+</tbody>
+</table>
+<p>DALI-2 已定义按钮、存在传感器和照度传感器等输入设备；Home Assistant 可通过本地 KNX/IP 或 Modbus 接口管理灯光、窗帘、空调等实体。无线设备以 Zigbee 为主，Matter/Thread 作为后续兼容方向，不作为第一阶段固定回路的唯一控制方式。</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="分区设计">分区设计</h2><a class="sl-anchor-link" href="#分区设计"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “分区设计”</span></a></div>
+<p>下表是按当前二维底图给出的初步点位与回路建议。最终数量必须在现场确认灯具回路、窗户数量、窗帘宽度和吊顶条件后冻结。</p>
+<table>
+<thead>
+<tr>
+<th>区域</th>
+<th>灯光控制</th>
+<th>存在与环境</th>
+<th>窗帘与其他</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A大厅1～3</td>
+<td>每区 2 个照明逻辑组，靠窗/内侧分别调光；每区设独立场景面板</td>
+<td>每区 2 个存在探测点 + 1 个照度值；开放区共设 2～3 个温湿度/CO₂点</td>
+<td>无外窗区域不装窗帘；预留清扫、午休、全开场景</td>
+</tr>
+<tr>
+<td>A大厅4</td>
+<td>2 个照明组，交流与休息模式分开</td>
+<td>1 个存在+照度，1 个温湿度点</td>
+<td>东侧窗帘 1 组；支持会客、遮阳、全开场景</td>
+</tr>
+<tr>
+<td>B办公室1～3</td>
+<td>每室 1～2 个照明组，门口保留实体开关</td>
+<td>每室 1 个存在+照度；有固定人员时增加温湿度</td>
+<td>每室东侧窗帘 1 组，共 3 组；下午防眩光</td>
+</tr>
+<tr>
+<td>C办公室1～5</td>
+<td>每室 1～2 个照明组，门口保留实体开关</td>
+<td>每室 1 个存在+照度；有固定人员时增加温湿度</td>
+<td>每室西侧窗帘 1 组，共 5 组；下午遮阳优先</td>
+</tr>
+<tr>
+<td>D办公室1～3</td>
+<td>房间较长，每室按前/后两组照明，避免整室同时点亮</td>
+<td>每室 2 个存在探测点 + 1 个照度值</td>
+<td>仅对现场确认的外窗设置窗帘，预计 0～3 组</td>
+</tr>
+<tr>
+<td>D会议室</td>
+<td>基础、会议、演示、视频四个灯光场景</td>
+<td>1 个存在+照度，1 个 CO₂/温湿度点</td>
+<td>西侧窗帘 1 组；与显示设备、会议预约联动</td>
+</tr>
+<tr>
+<td>食堂/餐厅</td>
+<td>灶台、食堂一、主餐厅分别控制；大餐桌上方和周边照明分组，餐厅支持调光</td>
+<td>餐厅 2～3 个存在+照度，1～2 个 CO₂/温湿度点；灶台另设漏水和高温告警</td>
+<td>北侧连续外窗预计 3～4 组窗帘；就餐/清洁场景</td>
+</tr>
+<tr>
+<td>南侧前厅</td>
+<td>靠入口、中央、工位外围分 3～4 组，夜间保留低照度路径灯</td>
+<td>3～4 个存在探测点 + 2 个照度参考点</td>
+<td>根据实际外窗决定；支持迎宾、活动、夜间和清扫场景</td>
+</tr>
+<tr>
+<td>前台/接待厅</td>
+<td>前台 2 组、接待厅 1～2 组</td>
+<td>各 1 个存在+照度</td>
+<td>前台南侧窗帘 1 组；访客到达联动迎宾灯</td>
+</tr>
+<tr>
+<td>走廊/电梯厅/入口</td>
+<td>分段点亮，前方区域先亮、后方区域延迟熄灭</td>
+<td>每段 1 个存在探测点</td>
+<td>夜间保持最低安全照明；不替代法定应急照明</td>
+</tr>
+<tr>
+<td>卫生间1～3</td>
+<td>每间 1 个照明组，风机单独延时</td>
+<td>每间 1 个存在传感器；可增加湿度检测</td>
+<td>无人延时关闭，风机继续运行后再停止</td>
+</tr>
+<tr>
+<td>机房</td>
+<td>照明手动优先，无人长延时关闭</td>
+<td>温湿度、漏水、门磁和市电/UPS状态</td>
+<td>不自动切断服务器或网络设备电源</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h2"><h2 id="初步设备规模">初步设备规模</h2><a class="sl-anchor-link" href="#初步设备规模"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “初步设备规模”</span></a></div>
+<table>
+<thead>
+<tr>
+<th>设备类别</th>
+<th style="text-align: right">估算数量</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>照明逻辑组/可控回路</td>
+<td style="text-align: right">38～46</td>
+<td>最终取决于现有配电回路和是否更换 DALI 驱动</td>
+</tr>
+<tr>
+<td>自动窗帘组</td>
+<td style="text-align: right">15～18</td>
+<td>以办公室、会议室、餐厅和前台外窗为主</td>
+</tr>
+<tr>
+<td>存在+照度探测点</td>
+<td style="text-align: right">28～34</td>
+<td>开放区和长房间需要多点覆盖，不能只按“一个房间一个”配置</td>
+</tr>
+<tr>
+<td>墙面开关/场景面板</td>
+<td style="text-align: right">22～28</td>
+<td>每个独立房间至少一个，开放区和餐厅分区设置</td>
+</tr>
+<tr>
+<td>温湿度/CO₂点位</td>
+<td style="text-align: right">8～12</td>
+<td>重点覆盖开放区、会议室、餐厅和机房</td>
+</tr>
+<tr>
+<td>漏水/门磁/设备状态点</td>
+<td style="text-align: right">8～14</td>
+<td>灶台、机房、入口及重要房间</td>
+</tr>
+<tr>
+<td>DALI 总线</td>
+<td style="text-align: right">2 条</td>
+<td>建议按南北或东西划分故障域并预留容量</td>
+</tr>
+<tr>
+<td>KNX/Modbus IP 网关</td>
+<td style="text-align: right">1～2 台</td>
+<td>用于窗帘、空调、计量或配电箱执行器</td>
+</tr>
+<tr>
+<td>Zigbee 协调器</td>
+<td style="text-align: right">1 台起</td>
+<td>配合足够的有电路由设备；覆盖不足时再拆分网络</td>
+</tr>
+<tr>
+<td>本地自动化主机 + UPS</td>
+<td style="text-align: right">1 套</td>
+<td>配置备份、备用存储和恢复说明必须归档</td>
+</tr>
+</tbody>
+</table>
+<p>以上是规划数量，不是采购清单。首轮采购应只覆盖试点区域，验证传感器覆盖、灯具驱动兼容性和窗帘电机噪声后再批量下单。</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="首轮试点范围">首轮试点范围</h2><a class="sl-anchor-link" href="#首轮试点范围"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “首轮试点范围”</span></a></div>
+<p>建议用 <strong>D会议室 + A大厅1 + B办公室1 + C办公室1 + 两组不同朝向窗帘</strong> 做最小闭环，覆盖会议、开放办公、独立办公室和东/西遮阳四种典型条件。</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>试点配置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本地平台</td>
+<td>1 台自动化主机、1 台 UPS、MQTT 与配置备份</td>
+</tr>
+<tr>
+<td>照明</td>
+<td>6～8 个可控回路或 DALI 逻辑组，包含开关与调光两种类型</td>
+</tr>
+<tr>
+<td>传感器</td>
+<td>6～8 个存在/照度点，2～3 个温湿度/CO₂点</td>
+</tr>
+<tr>
+<td>窗帘</td>
+<td>东、西朝向各 1 组电机、控制器和本地开/停/关面板</td>
+</tr>
+<tr>
+<td>人机界面</td>
+<td>4 个墙面场景面板，1 个管理仪表盘</td>
+</tr>
+<tr>
+<td>网关</td>
+<td>1 套照明网关、1 套窗帘/Modbus或KNX接口、1 个 Zigbee 协调器</td>
+</tr>
+<tr>
+<td>试运行</td>
+<td>先记录建议动作 3～5 天，再自动执行不少于 2 周</td>
+</tr>
+</tbody>
+</table>
+<p>试点通过后再采购其余区域设备；如果出现静坐误关灯、无线丢包、窗帘定位漂移或灯具调光频闪，应先调整技术路线而不是批量复制问题。</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="自动灯设计">自动灯设计</h2><a class="sl-anchor-link" href="#自动灯设计"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “自动灯设计”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="控制逻辑">控制逻辑</h3><a class="sl-anchor-link" href="#控制逻辑"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “控制逻辑”</span></a></div>
+<ol>
+<li>房间从“无人”变为“有人”时，只有实测照度低于该房间设定值才自动开灯。</li>
+<li>靠窗灯组根据自然光单独调光，内侧灯组保持工作照度，避免全区同步开关。</li>
+<li>离开后先进入低照度等待，再在延时结束后关闭；开放区、会议室和卫生间使用不同延时。</li>
+<li>用户通过墙面开关手动操作后，该房间进入临时人工模式；直到人工超时、场景结束或确认无人后才恢复自动控制。</li>
+<li>清扫、加班和活动场景必须显式启用，不能仅靠工作日时间表判断是否有人。</li>
+</ol>
+<div class="sl-heading-wrapper level-h3"><h3 id="施工要求">施工要求</h3><a class="sl-anchor-link" href="#施工要求"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “施工要求”</span></a></div>
+<ul>
+<li>每个照明回路都必须能在控制平台离线时通过墙面开关控制。</li>
+<li>大功率或多灯具回路由接触器/合适额定值的执行器驱动，不能使用小型无线模块直接承载全部负载。</li>
+<li>调光灯具须确认驱动协议、最低亮度、频闪和断电恢复行为。</li>
+<li>法定应急照明、疏散指示和消防联动保持独立。</li>
+</ul>
+<div class="sl-heading-wrapper level-h2"><h2 id="自动窗帘设计">自动窗帘设计</h2><a class="sl-anchor-link" href="#自动窗帘设计"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “自动窗帘设计”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="分区原则">分区原则</h3><a class="sl-anchor-link" href="#分区原则"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “分区原则”</span></a></div>
+<ul>
+<li>一个房间不同朝向的窗户必须分组；同朝向连续窗可在电机容量允许时合并。</li>
+<li>B 区东侧以早间遮阳为主，C 区西侧以午后防眩光和降温为主。</li>
+<li>餐厅和前台以整体场景为主，独立办公室允许本地覆盖自动位置。</li>
+<li>会议室进入演示场景时关闭窗帘，会议结束后恢复到进入场景前的位置。</li>
+</ul>
+<div class="sl-heading-wrapper level-h3"><h3 id="控制与安全">控制与安全</h3><a class="sl-anchor-link" href="#控制与安全"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “控制与安全”</span></a></div>
+<ul>
+<li>电机控制器必须实现“开/关互锁”，禁止正反转同时通电。</li>
+<li>优先选择具备位置反馈或行程反馈的电机；时间估算型电机应定期执行全开/全关校准。</li>
+<li>人员可触及的位置优先选用遇阻停止电机；强电供电与控制回路由具备相应资质的人员施工。</li>
+<li>墙面开、停、关按键直接接入控制器，本地操作优先于平台命令。</li>
+<li>自动遮阳后设置人工覆盖时间，避免用户刚打开窗帘又被规则立即关闭。</li>
+<li>窗帘供电、检修口和电机更换空间必须在吊顶施工前确认。</li>
+</ul>
+<div class="sl-heading-wrapper level-h2"><h2 id="环境空调和能耗">环境、空调和能耗</h2><a class="sl-anchor-link" href="#环境空调和能耗"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “环境、空调和能耗”</span></a></div>
+<ul>
+<li><strong>空气质量</strong>：会议室、开放区和餐厅根据 CO₂ 趋势联动新风或提醒开窗；阈值在试运行阶段根据人数和现场通风能力调校。</li>
+<li><strong>空调</strong>：人员存在只影响设定温度与运行模式，不直接频繁切断空调电源；短时离开保持，长时无人进入节能设定。</li>
+<li><strong>机房</strong>：温湿度、漏水、市电和 UPS 告警独立推送；自动化平台不得自动关闭核心设备。</li>
+<li><strong>能耗</strong>：至少分项计量照明、普通插座、空调/新风和机房；先建立基线，再调整下班和无人策略。</li>
+<li><strong>餐饮区</strong>：漏水、异常高温和燃气安全设备使用合规的独立报警器；平台只读取状态和通知，不取代本地声光报警或消防系统。</li>
+</ul>
+<div class="sl-heading-wrapper level-h2"><h2 id="网络与安全">网络与安全</h2><a class="sl-anchor-link" href="#网络与安全"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “网络与安全”</span></a></div>
+<p>建议在现有 VLAN 10、20、99 基础上新增 <strong>VLAN 30 Automation Services</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>目标</th>
+<th>策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VLAN 10 Office/RD</td>
+<td>VLAN 30 Home Assistant</td>
+<td>仅开放 HTTPS 和必要管理入口</td>
+</tr>
+<tr>
+<td>VLAN 30 自动化服务</td>
+<td>VLAN 20 IoT</td>
+<td>允许到明确设备的 MQTT、Modbus TCP、HTTPS 等必要端口</td>
+</tr>
+<tr>
+<td>VLAN 20 IoT</td>
+<td>VLAN 10 / VLAN 99</td>
+<td>默认拒绝</td>
+</tr>
+<tr>
+<td>VLAN 20 IoT</td>
+<td>互联网</td>
+<td>默认拒绝，仅对 DNS、NTP 和经批准的固件更新临时放行</td>
+</tr>
+<tr>
+<td>VLAN 99 Management</td>
+<td>网关与控制器</td>
+<td>仅管理员访问，记录配置变更</td>
+</tr>
+</tbody>
+</table>
+<p>Home Assistant、MQTT、网关和协调器配置应定期备份；不得把设备密码、令牌、私钥或 KNX Secure 密钥提交到公开仓库。</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="实施阶段">实施阶段</h2><a class="sl-anchor-link" href="#实施阶段"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “实施阶段”</span></a></div>
+<ol>
+<li><strong>现场勘查</strong>：逐回路点灯，记录配电箱、灯具驱动、窗户尺寸、窗帘供电、空调接口和吊顶检修条件。</li>
+<li><strong>试点</strong>：选择 D会议室、A大厅1、B办公室1、C办公室1和两组窗帘，运行不少于两周。</li>
+<li><strong>调整</strong>：根据误关灯、传感器盲区、窗帘噪声、眩光和手动覆盖记录调整参数。</li>
+<li><strong>分区展开</strong>：先公共区与开放区，再独立办公室，最后餐饮和能耗联动。</li>
+<li><strong>验收移交</strong>：逐场景测试平台在线、平台离线、网络中断、断电恢复和手动覆盖。</li>
+</ol>
+<div class="sl-heading-wrapper level-h2"><h2 id="方案冻结前必须确认">方案冻结前必须确认</h2><a class="sl-anchor-link" href="#方案冻结前必须确认"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “方案冻结前必须确认”</span></a></div>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 每个灯光回路的负载、控制线和驱动协议。</li>
+<li class="task-list-item"><input type="checkbox" disabled> 每扇窗的朝向、宽度、轨道形式、电机供电和检修空间。</li>
+<li class="task-list-item"><input type="checkbox" disabled> 空调、新风和会议设备的品牌、型号与开放接口。</li>
+<li class="task-list-item"><input type="checkbox" disabled> 吊顶材质、传感器安装高度和遮挡条件。</li>
+<li class="task-list-item"><input type="checkbox" disabled> 哪些房间允许自动开灯，哪些只允许自动关灯。</li>
+<li class="task-list-item"><input type="checkbox" disabled> 工作时间、午休、加班、清扫和节假日规则。</li>
+<li class="task-list-item"><input type="checkbox" disabled> 消防、应急照明、门禁和监控的责任边界。</li>
+</ul>
+<div class="sl-heading-wrapper level-h2"><h2 id="技术参考">技术参考</h2><a class="sl-anchor-link" href="#技术参考"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “技术参考”</span></a></div>
+<ul>
+<li><a href="https://www.home-assistant.io/">Home Assistant：本地控制优先的开源自动化平台</a></li>
+<li><a href="https://www.dali-alliance.org/dali/sensors.html">DALI Alliance：DALI-2 按钮、存在和照度传感器</a></li>
+<li><a href="https://www.home-assistant.io/integrations/modbus/">Home Assistant Modbus 集成</a></li>
+<li><a href="https://www.home-assistant.io/integrations/knx/">Home Assistant KNX 集成</a></li>
+<li><a href="https://www.zigbee2mqtt.io/">Zigbee2MQTT：开放的 Zigbee 到 MQTT 网桥</a></li>
+<li><a href="https://www.home-assistant.io/integrations/matter/">Home Assistant Matter 集成</a></li>
+</ul>
+</div><footer class="sl-flex astro-xhxjzfa7"><div class="meta sl-flex astro-xhxjzfa7"><a href="https://github.com/renhedata/ai-lab-smart-office/edit/main/src/content/docs/implementation/smart-office-plan.md" class="sl-flex print:hidden astro-xk5gmzsg"><svg aria-hidden="true" class="astro-xk5gmzsg astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path d="M22 7.24a1 1 0 0 0-.29-.71l-4.24-4.24a1 1 0 0 0-1.1-.22 1 1 0 0 0-.32.22l-2.83 2.83L2.29 16.05a1 1 0 0 0-.29.71V21a1 1 0 0 0 1 1h4.24a1 1 0 0 0 .76-.29l10.87-10.93L21.71 8c.1-.1.17-.2.22-.33a1 1 0 0 0 0-.24v-.14l.07-.05ZM6.83 20H4v-2.83l9.93-9.93 2.83 2.83L6.83 20ZM18.17 8.66l-2.83-2.83 1.42-1.41 2.82 2.82-1.41 1.42Z"/></svg>编辑此页</a></div><div class="pagination-links print:hidden astro-jgq3vlii" dir="ltr"><a href="/ai-lab-smart-office/guide/office-layout/" rel="prev" class="astro-jgq3vlii"><svg aria-hidden="true" class="astro-jgq3vlii astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg><span class="astro-jgq3vlii">上一页<br class="astro-jgq3vlii"><span class="link-title astro-jgq3vlii">办公室布局</span></span></a><a href="/ai-lab-smart-office/implementation/network/" rel="next" class="astro-jgq3vlii"><svg aria-hidden="true" class="astro-jgq3vlii astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg><span class="astro-jgq3vlii">下一页<br class="astro-jgq3vlii"><span class="link-title astro-jgq3vlii">网络与弱电规划</span></span></a></div></footer></div></div></main></div></div></div></div></body></html>
