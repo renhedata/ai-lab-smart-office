@@ -1,0 +1,39 @@
+name: 现场问题 / 变更
+description: 记录施工、网络、设备或自动化中的异常与现场变更。
+title: "[现场] "
+labels: ["field", "triage"]
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 影响等级
+      options:
+        - 阻塞施工或核心服务
+        - 影响使用，需尽快处理
+        - 不阻塞，可纳入后续安排
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: 区域 / 设备编号
+      placeholder: 例如：会议室 A / AP-MEET-01
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: 发现的问题或现场变化
+      description: 包含发生时间、现象、已做操作和照片/日志链接。
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: 影响与临时措施
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议处理方案
+      description: 若涉及预算、设备型号或拓扑变化，请关联决策记录。
+

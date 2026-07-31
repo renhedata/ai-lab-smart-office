@@ -1,0 +1,37 @@
+name: 采购申请
+description: 记录设备、材料或服务的采购决策。
+title: "[采购] "
+labels: ["procurement", "triage"]
+body:
+  - type: input
+    id: item
+    attributes:
+      label: 设备或材料名称
+      placeholder: 例如：PoE 交换机
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 用途与安装位置
+      placeholder: 用于哪个区域、解决哪个需求、与哪些系统关联？
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: 候选型号与报价对比
+      placeholder: 型号、价格、供应商、交期、保修、接口/协议兼容性。
+    validations:
+      required: true
+  - type: input
+    id: budget
+    attributes:
+      label: 预算金额
+      placeholder: CNY 0.00
+  - type: textarea
+    id: approval
+    attributes:
+      label: 最终选择与批准记录
+      placeholder: 选择理由、批准人、关联 ADR。
+

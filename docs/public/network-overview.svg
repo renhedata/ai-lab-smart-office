@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI实验室网络架构概览</title>
+  <desc id="desc">左侧为运营商接入，中间为贵阳网络，右侧为遵义网络。贵阳 CCR1009 连接核心交换网络、旁路由，并通过 GRE 连接遵义 CCR1072。</desc>
+  <defs>
+    <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#0891b2"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-25%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#0f172a" flood-opacity=".10"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#64748b"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#0f766e"/>
+    </marker>
+    <style>
+      .zone { fill: #ffffff; stroke: #dbe3ec; stroke-width: 2; }
+      .zone-title { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 27px; font-weight: 700; fill: #0f172a; }
+      .zone-subtitle { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 19px; fill: #64748b; }
+      .node { filter: url(#shadow); }
+      .node-title { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 25px; font-weight: 700; text-anchor: middle; }
+      .node-detail { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 19px; text-anchor: middle; }
+      .edge-label { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 18px; font-weight: 650; fill: #475569; text-anchor: middle; }
+      .line { fill: none; stroke: #64748b; stroke-width: 3; marker-end: url(#arrow); }
+      .gre { fill: none; stroke: #0f766e; stroke-width: 3; stroke-dasharray: 9 8; marker-start: url(#arrowTeal); marker-end: url(#arrowTeal); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" rx="28" fill="url(#canvas)"/>
+
+  <!-- Site zones -->
+  <rect class="zone" x="290" y="34" width="570" height="652" rx="24"/>
+  <circle cx="327" cy="76" r="8" fill="#0d9488"/>
+  <text class="zone-title" x="348" y="85">贵阳网络</text>
+  <text class="zone-subtitle" x="327" y="116">边界、交换与策略出口</text>
+
+  <rect class="zone" x="890" y="34" width="280" height="652" rx="24"/>
+  <circle cx="927" cy="76" r="8" fill="#2563eb"/>
+  <text class="zone-title" x="948" y="85">遵义网络</text>
+  <text class="zone-subtitle" x="927" y="116">远端站点</text>
+
+  <!-- Connections behind nodes -->
+  <path class="line" d="M135 182V228"/>
+  <path class="line" d="M240 282C276 282 298 222 340 222"/>
+  <path class="line" d="M465 278C465 320 425 335 425 372"/>
+  <path class="line" d="M590 222C650 222 670 335 700 372"/>
+  <path class="line" d="M425 474V530"/>
+  <path class="line" d="M700 474V530"/>
+  <path class="gre" d="M590 191C720 143 840 143 920 191"/>
+  <path class="line" d="M1030 246V452"/>
+
+  <text class="edge-label" x="276" y="254">主用 / 备用</text>
+  <text class="edge-label" x="407" y="327">交换</text>
+  <text class="edge-label" x="668" y="327">策略流量</text>
+  <rect x="733" y="132" width="104" height="32" rx="16" fill="#ecfdf5"/>
+  <text class="edge-label" x="785" y="154" fill="#0f766e">GRE 互联</text>
+
+  <!-- Provider access -->
+  <text class="zone-title" x="38" y="77">运营商接入</text>
+  <text class="zone-subtitle" x="38" y="108">互联网与公网入站</text>
+
+  <g class="node">
+    <rect x="30" y="122" width="210" height="60" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <text class="node-title" x="135" y="160" fill="#172554">互联网</text>
+  </g>
+
+  <g class="node">
+    <rect x="30" y="228" width="210" height="108" rx="18" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+    <text class="node-title" x="135" y="270" fill="#172554">多线路出口</text>
+    <text class="node-detail" x="135" y="303" fill="#475569">PPPoE · 静态专线</text>
+  </g>
+
+  <!-- Guiyang -->
+  <g class="node">
+    <rect x="340" y="160" width="250" height="118" rx="20" fill="url(#primary)"/>
+    <text class="node-title" x="465" y="207" fill="#ffffff">CCR1009</text>
+    <text class="node-detail" x="465" y="242" fill="#ecfeff">路由 · 防火墙 · DHCP/DNS</text>
+  </g>
+
+  <g class="node">
+    <rect x="315" y="372" width="220" height="102" rx="18" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+    <text class="node-title" x="425" y="414" fill="#172554">H3C 核心网络</text>
+    <text class="node-detail" x="425" y="447" fill="#475569">SW1 · SW2 · SW3</text>
+  </g>
+
+  <g class="node">
+    <rect x="590" y="372" width="220" height="102" rx="18" fill="#fff7ed" stroke="#fb923c" stroke-width="2"/>
+    <text class="node-title" x="700" y="414" fill="#7c2d12">Arch 旁路由</text>
+    <text class="node-detail" x="700" y="447" fill="#9a3412">策略路由 · Hysteria</text>
+  </g>
+
+  <g class="node">
+    <rect x="315" y="530" width="220" height="108" rx="18" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+    <text class="node-title" x="425" y="572" fill="#0f172a">办公与智能终端</text>
+    <text class="node-detail" x="425" y="606" fill="#475569">Office · IoT · AP · 管理</text>
+  </g>
+
+  <g class="node">
+    <rect x="590" y="530" width="220" height="108" rx="18" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+    <text class="node-title" x="700" y="572" fill="#0f172a">远端业务出口</text>
+    <text class="node-detail" x="700" y="606" fill="#475569">非 CN 网络 · 私网</text>
+  </g>
+
+  <!-- Zunyi -->
+  <g class="node">
+    <rect x="920" y="144" width="220" height="102" rx="18" fill="url(#primary)"/>
+    <text class="node-title" x="1030" y="187" fill="#ffffff">CCR1072</text>
+    <text class="node-detail" x="1030" y="220" fill="#ecfeff">遵义边界网关</text>
+  </g>
+
+  <g class="node">
+    <rect x="920" y="452" width="220" height="108" rx="18" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+    <text class="node-title" x="1030" y="494" fill="#172554">遵义内网</text>
+    <text class="node-detail" x="1030" y="528" fill="#475569">LAN · OVPN · WireGuard</text>
+  </g>
+
+  <!-- Compact legend -->
+  <line x1="927" y1="620" x2="971" y2="620" stroke="#0f766e" stroke-width="3" stroke-dasharray="9 8"/>
+  <text class="zone-subtitle" x="984" y="627">站点互联</text>
+  <line x1="927" y1="655" x2="971" y2="655" stroke="#64748b" stroke-width="3"/>
+  <text class="zone-subtitle" x="984" y="662">业务流向</text>
+</svg>

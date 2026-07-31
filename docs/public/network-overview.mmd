@@ -1,0 +1,25 @@
+flowchart TB
+    Internet["互联网 / 运营商网络"]
+    WAN["贵阳多线路出口<br/>PPPoE 主用<br/>专线备用 / 入站"]
+    Gateway["贵阳网关 · CCR1009<br/>路由 / 防火墙<br/>DHCP / DNS"]
+    LAN["贵阳内网<br/>办公 / IoT<br/>管理 VLAN"]
+    Bypass["旁路由<br/>策略出口 · Hysteria"]
+    Remote["远端业务 / 非 CN 网络"]
+    ZGateway["遵义网关 · CCR1072"]
+    ZLAN["遵义 LAN / VPN"]
+
+    Internet <--> WAN
+    WAN <--> Gateway
+    Gateway <--> LAN
+    Gateway -->|"策略出口"| Bypass
+    Bypass --> Remote
+    Gateway <-->|"GRE 站点互联"| ZGateway
+    ZGateway <--> ZLAN
+
+    classDef gateway fill:#0f766e,stroke:#0f766e,color:#fff,stroke-width:2px
+    classDef network fill:#eff6ff,stroke:#2563eb,color:#172554,stroke-width:1.5px
+    classDef iot fill:#ecfdf5,stroke:#0d9488,color:#134e4a,stroke-width:1.5px
+    classDef remote fill:#fff7ed,stroke:#ea580c,color:#7c2d12,stroke-width:1.5px
+    class Gateway,ZGateway gateway
+    class WAN,LAN,ZLAN network
+    class Bypass,Remote remote

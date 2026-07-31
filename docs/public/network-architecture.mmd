@@ -1,0 +1,68 @@
+flowchart TB
+    Internet["互联网 / 运营商网络"]
+
+    subgraph GY["贵阳网络"]
+        CCR["MikroTik CCR1009<br/>192.168.99.1<br/>RouterOS 7.19.3<br/>网关・DHCP・DNS・防火墙・策略路由"]
+
+        PPP["三路 PPPoE<br/>ether2 / ether3 / ether4<br/>运营商 CGNAT"]
+        Dedicated["200M 静态公网专线<br/>sfp1 · VLAN 214<br/>贵阳公网 IP（已脱敏）"]
+        Reserve["ether1<br/>WAN1 预留・无链路"]
+
+        Bypass["Arch Linux 旁路由<br/>192.168.10.62<br/>Hysteria TProxy"]
+        Hysteria["Hysteria 远端出口"]
+        Overseas["非 CN 公网<br/>TCP / UDP"]
+        RemoteBiz["远端业务网<br/>10.0.0.0/16<br/>192.168.5.0/24<br/>10.8.0.0/16"]
+        Backend["sub.rhzy.ai 后端<br/>10.0.10.42:443"]
+
+        SW1["H3C SW1 核心交换机<br/>192.168.99.2"]
+        SW2["H3C SW2<br/>192.168.99.3"]
+        SW3["H3C SW3<br/>192.168.99.4"]
+        AP["爱快 AP Trunk<br/>SW1 GE1/0/43 已确认接入"]
+
+        Office["VLAN 10 · Office/RD<br/>192.168.10.0/23<br/>GW 192.168.10.1"]
+        IoT["VLAN 20 · IoT<br/>192.168.20.0/23<br/>GW 192.168.20.1"]
+        Mgmt["VLAN 99 · Management<br/>192.168.99.0/24<br/>GW 192.168.99.1"]
+
+        CCR -->|"主出口：distance 2 ECMP"| PPP
+        PPP --> Internet
+        CCR <-->|"备用出口：distance 3<br/>公网入站"| Dedicated
+        Dedicated --- Internet
+        Reserve -.->|"预留"| CCR
+
+        CCR <-->|"bond-sw1<br/>ether5–8 · 4×1G LACP<br/>VLAN 10/20 tagged<br/>VLAN 99 native"| SW1
+        SW1 <-->|"GE37–40 ↔ GE45–48<br/>4×1G LACP Trunk"| SW2
+        SW1 <-->|"GE33–36 ↔ GE45–48<br/>4×1G LACP Trunk"| SW3
+        SW1 -->|"GE43 Trunk"| AP
+
+        SW1 --> Office
+        SW2 --> Office
+        SW3 --> Office
+        SW2 --> IoT
+        SW3 --> IoT
+        AP --> Office
+        AP --> IoT
+        SW1 --> Mgmt
+        SW2 --> Mgmt
+        SW3 --> Mgmt
+
+        Office <-->|"via-bypass<br/>策略 SNAT 192.168.10.1"| Bypass
+        CCR -->|"非 CN、rhzy.ai、远端私网<br/>TCP/UDP 策略路由"| Bypass
+        Bypass -->|"TProxy :2500"| Hysteria
+        Hysteria --> Overseas
+        Hysteria --> RemoteBiz
+        RemoteBiz --> Backend
+
+        Internet -->|"贵阳公网 IP（已脱敏）:443"| CCR
+        CCR -->|"DNAT 10.0.10.42:443<br/>经旁路由保持对称回程"| Bypass
+    end
+
+    subgraph ZY["遵义网络"]
+        ZCCR["MikroTik CCR1072<br/>遵义公网 IP（已脱敏）<br/>RouterOS 7.23.2"]
+        WG["WireGuard local-wgd<br/>10.10.10.1/24"]
+        ZLAN["遵义 LAN / OVPN<br/>10.0.0.0/16<br/>192.168.5.0/24<br/>10.8.0.0/16"]
+
+        WG --> ZCCR
+        ZLAN --> ZCCR
+    end
+
+    CCR <-->|"明文 GRE<br/>公网端点：已脱敏<br/>隧道：172.16.1.2 ↔ 172.16.1.3"| ZCCR

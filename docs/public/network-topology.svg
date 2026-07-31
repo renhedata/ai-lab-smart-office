@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">智能办公室初始逻辑拓扑</title>
+  <desc id="desc">运营商网络经过网关和核心交换机，连接办公终端、IoT、会议影音、运维管理和自动化平台。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#effcf9"/>
+      <stop offset="1" stop-color="#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity=".12"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0 12 6 0 12z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0 12 6 0 12z" fill="#0f766e"/>
+    </marker>
+    <style>
+      .node { filter: url(#shadow); }
+      .label { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; font-size: 23px; font-weight: 650; text-anchor: middle; }
+      .sub { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #475569; font-size: 16px; text-anchor: middle; }
+      .line { fill: none; stroke: #64748b; stroke-width: 3.5; marker-end: url(#arrow); }
+      .dash { fill: none; stroke: #0f766e; stroke-width: 3.5; stroke-dasharray: 9 8; marker-end: url(#arrow-teal); }
+    </style>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="url(#bg)"/>
+  <text x="70" y="70" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="30" font-weight="700" fill="#0f172a">智能办公室 · 初始逻辑拓扑</text>
+  <text x="70" y="105" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="17" fill="#475569">网络隔离、平台控制与运维管理的基本关系</text>
+
+  <path class="line" d="M600 185V225"/>
+  <path class="line" d="M600 335V385H215V430"/>
+  <path class="line" d="M600 335V385H470V430"/>
+  <path class="line" d="M600 335V385H730V430"/>
+  <path class="line" d="M600 335V385H985V430"/>
+  <path class="dash" d="M985 540C985 626 730 630 730 540"/>
+  <path class="dash" d="M730 540C730 610 470 610 470 540"/>
+
+  <g class="node">
+    <rect x="480" y="125" width="240" height="60" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <text class="label" x="600" y="162">运营商网络</text>
+  </g>
+  <g class="node">
+    <rect x="450" y="225" width="300" height="110" rx="20" fill="url(#core)"/>
+    <text x="600" y="273" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="25" font-weight="700" fill="#ffffff" text-anchor="middle">网关 / 防火墙</text>
+    <text x="600" y="305" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="17" fill="#dbeafe" text-anchor="middle">核心交换与访问控制</text>
+  </g>
+  <g class="node">
+    <rect x="95" y="430" width="240" height="110" rx="20" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <text class="label" x="215" y="476">办公终端 VLAN</text>
+    <text class="sub" x="215" y="508">电脑 · 手机 · 打印机</text>
+  </g>
+  <g class="node">
+    <rect x="350" y="430" width="240" height="110" rx="20" fill="#ffffff" stroke="#5eead4" stroke-width="2"/>
+    <text class="label" x="470" y="476">IoT 设备 VLAN</text>
+    <text class="sub" x="470" y="508">传感器 · 灯控 · 环境</text>
+  </g>
+  <g class="node">
+    <rect x="610" y="430" width="240" height="110" rx="20" fill="#ffffff" stroke="#c4b5fd" stroke-width="2"/>
+    <text class="label" x="730" y="476">会议影音 VLAN</text>
+    <text class="sub" x="730" y="508">屏幕 · 会议设备 · 音响</text>
+  </g>
+  <g class="node">
+    <rect x="865" y="430" width="240" height="110" rx="20" fill="#ffffff" stroke="#fbbf24" stroke-width="2"/>
+    <text class="label" x="985" y="476">运维管理 VLAN</text>
+    <text class="sub" x="985" y="508">备份 · 监控 · 配置</text>
+  </g>
+  <g class="node">
+    <rect x="560" y="595" width="340" height="76" rx="18" fill="#0f766e"/>
+    <text x="730" y="642" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="23" font-weight="700" fill="#ffffff" text-anchor="middle">自动化平台 / 控制面板</text>
+  </g>
+</svg>
+

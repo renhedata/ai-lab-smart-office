@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 文档库首页
+    url: https://github.com/<你的组织>/<仓库名>#readme
+    about: 先阅读项目范围、协作流程和已有方案。
+

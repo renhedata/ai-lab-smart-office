@@ -1,0 +1,37 @@
+name: 验收项
+description: 对已完成的设备、场景或施工项执行验收。
+title: "[验收] "
+labels: ["acceptance", "triage"]
+body:
+  - type: input
+    id: scope
+    attributes:
+      label: 验收对象
+      placeholder: 设备、区域、自动化场景或施工项
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: 验收标准
+      description: 写明可复核的通过条件。
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 测试过程与结果
+      description: 记录环境、日期、执行人、照片/截图/日志链接。
+    validations:
+      required: true
+  - type: dropdown
+    id: conclusion
+    attributes:
+      label: 验收结论
+      options:
+        - 通过
+        - 有条件通过（需跟踪遗留项）
+        - 不通过
+    validations:
+      required: true
+

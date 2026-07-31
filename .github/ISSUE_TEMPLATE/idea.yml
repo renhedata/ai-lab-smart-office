@@ -1,0 +1,37 @@
+name: 新想法 / 需求
+description: 提出一个智能办公室的改造想法或使用需求。
+title: "[想法] "
+labels: ["idea", "triage"]
+body:
+  - type: textarea
+    id: background
+    attributes:
+      label: 场景与问题
+      description: 谁在什么场景下遇到了什么问题？
+      placeholder: 例如：会议结束后经常忘记关闭显示屏和照明。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 初步设想
+      description: 期望的解决方式、涉及区域和设备。
+  - type: dropdown
+    id: system
+    attributes:
+      label: 系统类别
+      options:
+        - 网络与弱电
+        - 照明与环境
+        - 会议与影音
+        - 安防与门禁
+        - 自动化平台
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 成功标准
+      description: 如何判断这个想法已经真正解决问题？
+
