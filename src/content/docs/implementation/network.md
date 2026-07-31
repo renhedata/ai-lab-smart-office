@@ -3,9 +3,7 @@ title: 网络与弱电规划
 description: 网络与弱电设计、实施和验收的工作入口，与当前网络现状分开维护。
 ---
 
-# 网络与弱电规划
-
-本页用于规划尚未实施或正在实施的网络与弱电工作。查看现网链路、VLAN 和策略路由基线，请先读[当前网络现状](/guide/architecture)。
+本页用于规划尚未实施或正在实施的网络与弱电工作。查看现网链路、VLAN 和策略路由基线，请先读[当前网络现状](/ai-lab-smart-office/guide/architecture/)。
 
 ## 开工前清单
 
@@ -26,7 +24,7 @@ description: 网络与弱电设计、实施和验收的工作入口，与当前�
 
 ## 智能化网络扩展提案
 
-[智能化总体方案](/implementation/smart-office-plan)建议新增 VLAN 30 承载 Home Assistant、MQTT 和协议网关，现有 VLAN 20 继续承载 IoT 终端。该网段目前属于设计提案，不代表已在 CCR 和交换机中实施；须完成地址、DHCP、防火墙和回退方案评审后再变更现场网络。
+[智能化总体方案](/ai-lab-smart-office/implementation/smart-office-plan/)建议新增 VLAN 30 承载 Home Assistant、MQTT 和协议网关，现有 VLAN 20 继续承载 IoT 终端。该网段目前属于设计提案，不代表已在 CCR 和交换机中实施；须完成地址、DHCP、防火墙和回退方案评审后再变更现场网络。
 
 ## 验收证据
 

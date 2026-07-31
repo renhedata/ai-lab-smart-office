@@ -3,15 +3,13 @@ title: 当前网络现状
 description: AI实验室当前贵阳—遵义网络架构、链路、VLAN 和策略路由关系，作为后续改造与排障基线。
 ---
 
-# 当前网络现状
-
-本页记录已经在运行的网络基线，用于改造前核对和故障排查；如果你要规划新增布线、VLAN 或智能化网络，请转到[网络与弱电规划](/implementation/network)。
+本页记录已经在运行的网络基线，用于改造前核对和故障排查；如果你要规划新增布线、VLAN 或智能化网络，请转到[网络与弱电规划](/ai-lab-smart-office/implementation/network/)。
 
 ## 当前网络架构
 
-![AI实验室网络架构概览](/network-overview.svg)
+![AI实验室网络架构概览](/ai-lab-smart-office/network-overview.svg)
 
-文档页展示的是概览图，源文件位于 `docs/public/network-overview.mmd`；完整的实际拓扑保留在 `docs/public/network-architecture.mmd`，仅作为配置与排障时的技术参考。
+文档页展示的是概览图，源文件位于 `public/network-overview.mmd`；完整的实际拓扑保留在 `public/network-architecture.mmd`，仅作为配置与排障时的技术参考。
 
 ## 贵阳网络摘要
 

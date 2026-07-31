@@ -3,11 +3,9 @@ title: 办公室布局
 description: AI实验室办公室平面布局、功能分区和后续智能化点位规划基准。
 ---
 
-# 办公室布局
-
 ## 二维 CAD 底图
 
-[![AI实验室办公室二维平面底图](/layout/office-layout-2d.svg)](/layout/office-layout-2d.svg)
+[![AI实验室办公室二维平面底图](/ai-lab-smart-office/layout/office-layout-2d.svg)](/ai-lab-smart-office/layout/office-layout-2d.svg)
 
 点击图片可查看矢量大图。二维底图采用毫米单位和独立图层，可以继续补充准确尺寸、弱电点位与智能化设备。
 
@@ -15,13 +13,13 @@ description: AI实验室办公室平面布局、功能分区和后续智能化�
 
 | 文件 | 用途 |
 | --- | --- |
-| [CAD 下载包（ZIP）](/layout/office-layout-2d-cad.zip) | 推荐下载；解压后得到 DXF 源文件 |
-| [直接打开 DXF](/layout/office-layout-2d.dxf?v=07cd68a) | 使用 QCAD、LibreCAD、FreeCAD 或 AutoCAD 继续编辑 |
-| [SVG 矢量图](/layout/office-layout-2d.svg) | 在线查看或用于后续网页点位图 |
-| [PDF 打印版](/layout/office-layout-2d.pdf) | 评审、打印和现场标注 |
-| [PNG 预览图](/layout/office-layout-2d.png) | 嵌入文档、Issue 或聊天记录 |
+| [CAD 下载包（ZIP）](/ai-lab-smart-office/layout/office-layout-2d-cad.zip) | 推荐下载；解压后得到 DXF 源文件 |
+| [直接打开 DXF](/ai-lab-smart-office/layout/office-layout-2d.dxf) | 使用 QCAD、LibreCAD、FreeCAD 或 AutoCAD 继续编辑 |
+| [SVG 矢量图](/ai-lab-smart-office/layout/office-layout-2d.svg) | 在线查看或用于后续网页点位图 |
+| [PDF 打印版](/ai-lab-smart-office/layout/office-layout-2d.pdf) | 评审、打印和现场标注 |
+| [PNG 预览图](/ai-lab-smart-office/layout/office-layout-2d.png) | 嵌入文档、Issue 或聊天记录 |
 
-::: warning 图纸使用边界
+:::caution[图纸使用边界]
 这是依据现场平面图照片转绘的初稿：总宽按图面 `20000 mm` 校准，总高暂按图面 `27200 mm` 转绘；内部尺寸、墙厚、柱位和门窗位置仍须现场复核。当前文件适合作为空间定位和方案讨论底图，不应直接作为拆改或结构施工依据。
 :::
 
@@ -49,7 +47,7 @@ macOS 的“预览”通常不能直接显示 DXF；浏览器打开 DXF 时也�
 
 ## 前期原始平面图参考
 
-[![经清晰化处理的原始办公室平面图](/layout/office-layout-clean.png)](/layout/office-layout-clean.png)
+[![经清晰化处理的原始办公室平面图](/ai-lab-smart-office/layout/office-layout-clean.png)](/ai-lab-smart-office/layout/office-layout-clean.png)
 
 该图片是前期平面图的清晰化版本，仅用于核对总宽、外围轮廓和现场复测；房间分隔及功能名称以本页上方最新二维底图为准。
 
@@ -70,7 +68,7 @@ macOS 的“预览”通常不能直接显示 DXF；浏览器打开 DXF 时也�
 
 ## 智能化设计基准
 
-灯光、窗帘、环境、空调和能耗的逐区域设计见[智能化总体方案](/implementation/smart-office-plan)，具体规则与验收见[自动化场景](/implementation/automation)。
+灯光、窗帘、环境、空调和能耗的逐区域设计见[智能化总体方案](/ai-lab-smart-office/implementation/smart-office-plan/)，具体规则与验收见[自动化场景](/ai-lab-smart-office/implementation/automation/)。
 
 后续专项图应统一以本页平面图为底图，并分层维护，避免在一张图上叠加过多信息：
 

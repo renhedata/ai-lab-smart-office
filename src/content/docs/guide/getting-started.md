@@ -3,31 +3,29 @@ title: 使用指南
 description: 了解智能办公室文档库的导航、搜索、阅读与维护方法。
 ---
 
-# 使用指南
-
 这个文档库用来连接方案、任务和现场证据。只是查看项目时，按“总览→专题→验收”阅读；需要推进工作时，按“查现状→建 Issue→更新文档”操作。
 
 ## 先选择你的路径
 
 ### 我只想查看项目
 
-1. 先看[项目总览](/guide/project-overview)，了解目标、范围和建议阶段。
-2. 再看[办公室布局](/guide/office-layout)，确认房间名称、功能分区和图纸边界。
-3. 根据关心的专题进入[当前网络现状](/guide/architecture)、[智能化总体方案](/implementation/smart-office-plan)或[自动化场景](/implementation/automation)。
-4. 需要核对采购和交付时，查看[采购与设备台账](/management/procurement)和[施工与验收](/management/acceptance)。
+1. 先看[项目总览](/ai-lab-smart-office/guide/project-overview/)，了解目标、范围和建议阶段。
+2. 再看[办公室布局](/ai-lab-smart-office/guide/office-layout/)，确认房间名称、功能分区和图纸边界。
+3. 根据关心的专题进入[当前网络现状](/ai-lab-smart-office/guide/architecture/)、[智能化总体方案](/ai-lab-smart-office/implementation/smart-office-plan/)或[自动化场景](/ai-lab-smart-office/implementation/automation/)。
+4. 需要核对采购和交付时，查看[采购与设备台账](/ai-lab-smart-office/management/procurement/)和[施工与验收](/ai-lab-smart-office/management/acceptance/)。
 
 ### 我需要维护或推进项目
 
-1. 先阅读[协作与变更流程](/guide/workflow)，确认这项工作应进入文档、Issue 还是决策记录。
+1. 先阅读[协作与变更流程](/ai-lab-smart-office/guide/workflow/)，确认这项工作应进入文档、Issue 还是决策记录。
 2. 搜索已有页面和 Issue，避免建立两份相互冲突的记录。
 3. 新增费用、变更设备型号或布线、修改自动化规则、发现现场问题时，先建 Issue。
-4. 结论稳定后修改对应的 Markdown 文档；有重要取舍时，同步更新[决策记录](/guide/decision-log)。
+4. 结论稳定后修改对应的 Markdown 文档；有重要取舍时，同步更新[决策记录](/ai-lab-smart-office/guide/decision-log/)。
 
 ## 怎么导航和搜索
 
-### 顶部导航
+### 顶部工具栏
 
-顶部导航用来切换项目大类。进入一个大类后，再用左侧目录选择具体页面，不必反复回到首页。
+顶部工具栏提供站点首页、全文搜索、显示模式和 GitHub 入口；项目分类与页面切换统一使用左侧目录。
 
 ### 左侧目录
 
@@ -39,7 +37,7 @@ description: 了解智能办公室文档库的导航、搜索、阅读与维护�
 
 ### 搜索
 
-- 点击页面顶部的“搜索方案、设备、房间…”，或按 `⌘ K`（macOS）/ `Ctrl K`（Windows、Linux）。
+- 点击页面顶部的“搜索”，或按 `⌘ K`（macOS）/ `Ctrl K`（Windows、Linux）。
 - 输入房间名称、设备类型、协议、场景或任务，例如“D会议室”、“窗帘”、“VLAN”或“验收”。
 - 用方向键切换结果，按 Enter 打开，按 Esc 关闭。
 - 搜索结果会直接定位到页面标题；打开后先确认所在页面和章节，再开始执行。
@@ -48,14 +46,14 @@ description: 了解智能办公室文档库的导航、搜索、阅读与维护�
 
 | 信息类型 | 存放位置 | 例子 |
 | --- | --- | --- |
-| 范围、空间、现状、协作规则和技术决策 | `docs/guide/` | 项目总览、办公室布局、当前网络现状、决策记录 |
-| 技术方案、实施要求和自动化规则 | `docs/implementation/` | 网络与弱电规划、智能化总体方案、自动化场景 |
-| 采购、设备台账、施工与验收 | `docs/management/` | 报价选择、资产信息、验收结论 |
-| 网页需要展示或下载的图纸与图表 | `docs/public/` | SVG、PNG、PDF 和 CAD 下载包 |
+| 范围、空间、现状、协作规则和技术决策 | `src/content/docs/guide/` | 项目总览、办公室布局、当前网络现状、决策记录 |
+| 技术方案、实施要求和自动化规则 | `src/content/docs/implementation/` | 网络与弱电规划、智能化总体方案、自动化场景 |
+| 采购、设备台账、施工与验收 | `src/content/docs/management/` | 报价选择、资产信息、验收结论 |
+| 网页需要展示或下载的图纸与图表 | `public/` | SVG、PNG、PDF 和 CAD 下载包 |
 | 待决、待做、现场问题或待验收事项 | GitHub Issue | 采购设备、修复 AP 覆盖盲区、场景测试不通过 |
 | 对文档、图纸或配置的可审核变更 | Pull Request | 更新 VLAN 方案、修正点位或补充验收证据 |
 
-::: warning 不要写入仓库
+:::caution[不要写入仓库]
 密码、私钥、令牌、门禁凭证和个人敏感信息不得提交到文档、Issue 或 Pull Request。
 :::
 
@@ -71,8 +69,8 @@ description: 了解智能办公室文档库的导航、搜索、阅读与维护�
 
 ### 3. 记：让文档与现场重新一致
 
-完成实施或评审后，更新对应方案、图纸、设备台账和验收记录，关联 Issue 与测试证据。页面底部的“在 GitHub 中编辑此页”可作为文档修改入口。
+完成实施或评审后，更新对应方案、图纸、设备台账和验收记录，关联 Issue 与测试证据。页面底部的“编辑此页”可作为文档修改入口。
 
-::: tip 最简单的判断
+:::tip[最简单的判断]
 查结论，看文档；推任务，建 Issue；改结论，提 Pull Request；做了重要取舍，补决策记录。
 :::

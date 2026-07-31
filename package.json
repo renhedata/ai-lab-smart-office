@@ -4,12 +4,14 @@
   "private": true,
   "description": "AI实验室 DIY 智能办公室方案与实施文档库",
   "scripts": {
-    "docs:dev": "vitepress dev docs --host 0.0.0.0",
-    "docs:build": "vitepress build docs",
-    "docs:build:pages": "GITHUB_PAGES=true vitepress build docs",
-    "docs:preview": "vitepress preview docs --host 0.0.0.0"
+    "dev": "astro dev --host 0.0.0.0",
+    "start": "astro dev --host 0.0.0.0",
+    "build": "astro build",
+    "preview": "astro preview --host 0.0.0.0"
   },
-  "devDependencies": {
-    "vitepress": "^1.6.4"
+  "dependencies": {
+    "@astrojs/starlight": "^0.41.5",
+    "astro": "^7.0.2",
+    "sharp": "^0.35.3"
   }
 }

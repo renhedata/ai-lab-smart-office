@@ -2,6 +2,6 @@ node_modules/
 .venv/
 __pycache__/
 *.py[cod]
-docs/.vitepress/cache/
-docs/.vitepress/dist/
+dist/
+.astro/
 .DS_Store

@@ -539,7 +539,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("docs/public/layout"),
+        default=Path("public/layout"),
         help="Directory for generated assets",
     )
     return parser.parse_args()
