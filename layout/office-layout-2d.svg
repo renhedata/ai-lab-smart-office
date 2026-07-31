@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1875" viewBox="-1800 -1700 23600 31600">
+<metadata>AI实验室办公室二维平面底图初稿；总宽按 20000 mm 校准，内部尺寸需现场复核。</metadata>
+<style>
+        .sheet { fill: #ffffff; }
+        .zone-dining { fill: #fff7df; }
+        .zone-d { fill: #f5f0ff; }
+        .zone-c { fill: #edf7ff; }
+        .zone-b { fill: #effaf3; }
+        .zone-common { fill: #f2fbfa; }
+        .zone-service { fill: #f5f6f8; }
+        .wall { stroke: #111827; stroke-linecap: square; fill: none; }
+        .door { stroke: #0f766e; stroke-width: 55; fill: none; }
+        .window { stroke: #0284c7; stroke-width: 42; fill: none; }
+        .window-mask { stroke: #ffffff; fill: none; }
+        .column { fill: #111827; stroke: #111827; }
+        .furniture, .chair, .lift { fill: #f8fafc; stroke: #64748b; stroke-width: 36; }
+        .chair { fill: #ffffff; }
+        .lift { fill: #f1f5f9; stroke-width: 48; }
+        .zone-boundary { fill: none; stroke: #94a3b8; stroke-width: 32; stroke-dasharray: 180 120; }
+        .a-text, .a-dims, .a-ref { font-family: 'PingFang SC', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; text-anchor: middle; dominant-baseline: central; fill: #111827; }
+        .a-dims { fill: #475569; }
+        .a-ref { fill: #64748b; }
+        .dimension, .dimension-small { stroke: #64748b; stroke-width: 34; fill: none; marker-start: url(#tick); marker-end: url(#tick); }
+        .dimension-small { stroke-width: 24; }
+        .north { stroke: #0f172a; fill: #0f172a; }
+        </style>
+<defs><marker id="tick" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto"><path d="M2,10 L10,2" stroke="#64748b" stroke-width="1.5"/></marker></defs>
+<rect x="-1800" y="-1700" width="23600" height="31600" class="sheet" />
+<rect x="0" y="0" width="20000" height="5400" class="zone-dining" />
+<rect x="7100" y="3600" width="12900" height="5400" class="zone-d" />
+<rect x="0" y="5400" width="4500" height="15300" class="zone-c" />
+<rect x="15700" y="9000" width="4300" height="13400" class="zone-b" />
+<rect x="4500" y="9000" width="11200" height="14800" class="zone-common" />
+<rect x="0" y="20700" width="4500" height="6500" class="zone-service" />
+<rect x="4500" y="23800" width="15500" height="3400" class="zone-service" />
+<line x1="0" y1="0" x2="20000" y2="0" class="wall" stroke-width="260" />
+<line x1="0" y1="27200" x2="9500" y2="27200" class="wall" stroke-width="260" />
+<line x1="10700" y1="27200" x2="20000" y2="27200" class="wall" stroke-width="260" />
+<line x1="0" y1="0" x2="0" y2="27200" class="wall" stroke-width="260" />
+<line x1="20000" y1="0" x2="20000" y2="27200" class="wall" stroke-width="260" />
+<line x1="4500" y1="0" x2="4500" y2="2250" class="wall" stroke-width="140" />
+<line x1="4500" y1="3150" x2="4500" y2="4050" class="wall" stroke-width="140" />
+<line x1="4500" y1="4950" x2="4500" y2="5400" class="wall" stroke-width="140" />
+<line x1="7100" y1="0" x2="7100" y2="3900" class="wall" stroke-width="140" />
+<line x1="7100" y1="4800" x2="7100" y2="5700" class="wall" stroke-width="140" />
+<line x1="7100" y1="6600" x2="7100" y2="7500" class="wall" stroke-width="140" />
+<line x1="7100" y1="8400" x2="7100" y2="9000" class="wall" stroke-width="140" />
+<line x1="15000" y1="0" x2="15000" y2="3600" class="wall" stroke-width="140" />
+<line x1="0" y1="3400" x2="3350" y2="3400" class="wall" stroke-width="140" />
+<line x1="4250" y1="3400" x2="4500" y2="3400" class="wall" stroke-width="140" />
+<line x1="4500" y1="3600" x2="8200" y2="3600" class="wall" stroke-width="140" />
+<line x1="9200" y1="3600" x2="14000" y2="3600" class="wall" stroke-width="140" />
+<line x1="14900" y1="3600" x2="20000" y2="3600" class="wall" stroke-width="140" />
+<line x1="0" y1="5400" x2="20000" y2="5400" class="wall" stroke-width="140" />
+<line x1="7100" y1="7200" x2="20000" y2="7200" class="wall" stroke-width="140" />
+<line x1="7100" y1="9000" x2="20000" y2="9000" class="wall" stroke-width="140" />
+<line x1="4500" y1="5400" x2="4500" y2="5750" class="wall" stroke-width="140" />
+<line x1="4500" y1="6650" x2="4500" y2="7550" class="wall" stroke-width="140" />
+<line x1="4500" y1="8450" x2="4500" y2="9650" class="wall" stroke-width="140" />
+<line x1="4500" y1="10550" x2="4500" y2="12450" class="wall" stroke-width="140" />
+<line x1="4500" y1="13350" x2="4500" y2="14950" class="wall" stroke-width="140" />
+<line x1="4500" y1="15850" x2="4500" y2="17350" class="wall" stroke-width="140" />
+<line x1="4500" y1="18250" x2="4500" y2="21050" class="wall" stroke-width="140" />
+<line x1="4500" y1="21900" x2="4500" y2="23350" class="wall" stroke-width="140" />
+<line x1="4500" y1="24250" x2="4500" y2="25000" class="wall" stroke-width="140" />
+<line x1="0" y1="7200" x2="4500" y2="7200" class="wall" stroke-width="140" />
+<line x1="0" y1="9300" x2="4500" y2="9300" class="wall" stroke-width="140" />
+<line x1="0" y1="12100" x2="4500" y2="12100" class="wall" stroke-width="140" />
+<line x1="0" y1="14600" x2="4500" y2="14600" class="wall" stroke-width="140" />
+<line x1="0" y1="17000" x2="4500" y2="17000" class="wall" stroke-width="140" />
+<line x1="0" y1="20700" x2="4500" y2="20700" class="wall" stroke-width="140" />
+<line x1="2250" y1="20700" x2="2250" y2="23000" class="wall" stroke-width="140" />
+<line x1="0" y1="23000" x2="550" y2="23000" class="wall" stroke-width="140" />
+<line x1="1300" y1="23000" x2="2700" y2="23000" class="wall" stroke-width="140" />
+<line x1="3450" y1="23000" x2="4500" y2="23000" class="wall" stroke-width="140" />
+<line x1="0" y1="25000" x2="4950" y2="25000" class="wall" stroke-width="140" />
+<line x1="5850" y1="25000" x2="6500" y2="25000" class="wall" stroke-width="140" />
+<line x1="15700" y1="9000" x2="15700" y2="9300" class="wall" stroke-width="140" />
+<line x1="15700" y1="10200" x2="15700" y2="12100" class="wall" stroke-width="140" />
+<line x1="15700" y1="13000" x2="15700" y2="14900" class="wall" stroke-width="140" />
+<line x1="15700" y1="15800" x2="15700" y2="22650" class="wall" stroke-width="140" />
+<line x1="15700" y1="23450" x2="15700" y2="23500" class="wall" stroke-width="140" />
+<line x1="15700" y1="11800" x2="20000" y2="11800" class="wall" stroke-width="140" />
+<line x1="15700" y1="14600" x2="20000" y2="14600" class="wall" stroke-width="140" />
+<line x1="15700" y1="17600" x2="20000" y2="17600" class="wall" stroke-width="140" />
+<line x1="15700" y1="22400" x2="20000" y2="22400" class="wall" stroke-width="140" />
+<line x1="15700" y1="23500" x2="15950" y2="23500" class="wall" stroke-width="140" />
+<line x1="16800" y1="23500" x2="20000" y2="23500" class="wall" stroke-width="140" />
+<line x1="4500" y1="23800" x2="5100" y2="23800" class="wall" stroke-width="140" />
+<line x1="6000" y1="23800" x2="9550" y2="23800" class="wall" stroke-width="140" />
+<line x1="10450" y1="23800" x2="11550" y2="23800" class="wall" stroke-width="140" />
+<line x1="12450" y1="23800" x2="15700" y2="23800" class="wall" stroke-width="140" />
+<line x1="6500" y1="23800" x2="6500" y2="27200" class="wall" stroke-width="140" />
+<line x1="9000" y1="23800" x2="9000" y2="27200" class="wall" stroke-width="140" />
+<line x1="11000" y1="23800" x2="11000" y2="27200" class="wall" stroke-width="140" />
+<line x1="13500" y1="23800" x2="13500" y2="27200" class="wall" stroke-width="140" />
+<line x1="17000" y1="23500" x2="17000" y2="24000" class="wall" stroke-width="140" />
+<line x1="17000" y1="24850" x2="17000" y2="25700" class="wall" stroke-width="140" />
+<line x1="17000" y1="26550" x2="17000" y2="27200" class="wall" stroke-width="140" />
+<line x1="6500" y1="25350" x2="9000" y2="25350" class="wall" stroke-width="140" />
+<line x1="11000" y1="25350" x2="13500" y2="25350" class="wall" stroke-width="140" />
+<line x1="17000" y1="25350" x2="20000" y2="25350" class="wall" stroke-width="140" />
+<line x1="450" y1="0" x2="3900" y2="0" class="window-mask" stroke-width="295" />
+<line x1="450" y1="-45" x2="3900" y2="-45" class="window" />
+<line x1="450" y1="45" x2="3900" y2="45" class="window" />
+<line x1="7700" y1="0" x2="14400" y2="0" class="window-mask" stroke-width="295" />
+<line x1="7700" y1="-45" x2="14400" y2="-45" class="window" />
+<line x1="7700" y1="45" x2="14400" y2="45" class="window" />
+<line x1="15500" y1="0" x2="19550" y2="0" class="window-mask" stroke-width="295" />
+<line x1="15500" y1="-45" x2="19550" y2="-45" class="window" />
+<line x1="15500" y1="45" x2="19550" y2="45" class="window" />
+<line x1="450" y1="27200" x2="6000" y2="27200" class="window-mask" stroke-width="295" />
+<line x1="450" y1="27155" x2="6000" y2="27155" class="window" />
+<line x1="450" y1="27245" x2="6000" y2="27245" class="window" />
+<line x1="13900" y1="27200" x2="16500" y2="27200" class="window-mask" stroke-width="295" />
+<line x1="13900" y1="27155" x2="16500" y2="27155" class="window" />
+<line x1="13900" y1="27245" x2="16500" y2="27245" class="window" />
+<line x1="0" y1="550" x2="0" y2="2700" class="window-mask" stroke-width="295" />
+<line x1="-45" y1="550" x2="-45" y2="2700" class="window" />
+<line x1="45" y1="550" x2="45" y2="2700" class="window" />
+<line x1="0" y1="3850" x2="0" y2="5150" class="window-mask" stroke-width="295" />
+<line x1="-45" y1="3850" x2="-45" y2="5150" class="window" />
+<line x1="45" y1="3850" x2="45" y2="5150" class="window" />
+<line x1="0" y1="5750" x2="0" y2="6850" class="window-mask" stroke-width="295" />
+<line x1="-45" y1="5750" x2="-45" y2="6850" class="window" />
+<line x1="45" y1="5750" x2="45" y2="6850" class="window" />
+<line x1="0" y1="7600" x2="0" y2="8800" class="window-mask" stroke-width="295" />
+<line x1="-45" y1="7600" x2="-45" y2="8800" class="window" />
+<line x1="45" y1="7600" x2="45" y2="8800" class="window" />
+<line x1="0" y1="9950" x2="0" y2="11450" class="window-mask" stroke-width="295" />
+<line x1="-45" y1="9950" x2="-45" y2="11450" class="window" />
+<line x1="45" y1="9950" x2="45" y2="11450" class="window" />
+<line x1="0" y1="12700" x2="0" y2="14100" class="window-mask" stroke-width="295" />
+<line x1="-45" y1="12700" x2="-45" y2="14100" class="window" />
+<line x1="45" y1="12700" x2="45" y2="14100" class="window" />
+<line x1="0" y1="15250" x2="0" y2="16600" class="window-mask" stroke-width="295" />
+<line x1="-45" y1="15250" x2="-45" y2="16600" class="window" />
+<line x1="45" y1="15250" x2="45" y2="16600" class="window" />
+<line x1="0" y1="17650" x2="0" y2="19900" class="window-mask" stroke-width="295" />
+<line x1="-45" y1="17650" x2="-45" y2="19900" class="window" />
+<line x1="45" y1="17650" x2="45" y2="19900" class="window" />
+<line x1="20000" y1="650" x2="20000" y2="2950" class="window-mask" stroke-width="295" />
+<line x1="19955" y1="650" x2="19955" y2="2950" class="window" />
+<line x1="20045" y1="650" x2="20045" y2="2950" class="window" />
+<line x1="20000" y1="3950" x2="20000" y2="5050" class="window-mask" stroke-width="295" />
+<line x1="19955" y1="3950" x2="19955" y2="5050" class="window" />
+<line x1="20045" y1="3950" x2="20045" y2="5050" class="window" />
+<line x1="20000" y1="5700" x2="20000" y2="6850" class="window-mask" stroke-width="295" />
+<line x1="19955" y1="5700" x2="19955" y2="6850" class="window" />
+<line x1="20045" y1="5700" x2="20045" y2="6850" class="window" />
+<line x1="20000" y1="7500" x2="20000" y2="8750" class="window-mask" stroke-width="295" />
+<line x1="19955" y1="7500" x2="19955" y2="8750" class="window" />
+<line x1="20045" y1="7500" x2="20045" y2="8750" class="window" />
+<line x1="20000" y1="9650" x2="20000" y2="11250" class="window-mask" stroke-width="295" />
+<line x1="19955" y1="9650" x2="19955" y2="11250" class="window" />
+<line x1="20045" y1="9650" x2="20045" y2="11250" class="window" />
+<line x1="20000" y1="12250" x2="20000" y2="14150" class="window-mask" stroke-width="295" />
+<line x1="19955" y1="12250" x2="19955" y2="14150" class="window" />
+<line x1="20045" y1="12250" x2="20045" y2="14150" class="window" />
+<line x1="20000" y1="15050" x2="20000" y2="17050" class="window-mask" stroke-width="295" />
+<line x1="19955" y1="15050" x2="19955" y2="17050" class="window" />
+<line x1="20045" y1="15050" x2="20045" y2="17050" class="window" />
+<line x1="20000" y1="18200" x2="20000" y2="21900" class="window-mask" stroke-width="295" />
+<line x1="19955" y1="18200" x2="19955" y2="21900" class="window" />
+<line x1="20045" y1="18200" x2="20045" y2="21900" class="window" />
+<line x1="9500" y1="27200" x2="9500" y2="26000" class="door" />
+<path d="M 10700 27200 A 1200 1200 0 0 0 9500 26000" class="door"/>
+<line x1="3350" y1="3400" x2="3350" y2="2500" class="door" />
+<path d="M 4250 3400 A 900 900 0 0 0 3350 2500" class="door"/>
+<line x1="8200" y1="3600" x2="8200" y2="2600" class="door" />
+<path d="M 9200 3600 A 1000 1000 0 0 0 8200 2600" class="door"/>
+<line x1="14000" y1="3600" x2="14000" y2="2700" class="door" />
+<path d="M 14900 3600 A 900 900 0 0 0 14000 2700" class="door"/>
+<line x1="4500" y1="2250" x2="3600" y2="2250" class="door" />
+<path d="M 4500 3150 A 900 900 0 0 1 3600 2250" class="door"/>
+<line x1="4500" y1="4050" x2="3600" y2="4050" class="door" />
+<path d="M 4500 4950 A 900 900 0 0 1 3600 4050" class="door"/>
+<line x1="7100" y1="3900" x2="8000" y2="3900" class="door" />
+<path d="M 7100 4800 A 900 900 0 0 0 8000 3900" class="door"/>
+<line x1="7100" y1="5700" x2="8000" y2="5700" class="door" />
+<path d="M 7100 6600 A 900 900 0 0 0 8000 5700" class="door"/>
+<line x1="7100" y1="7500" x2="8000" y2="7500" class="door" />
+<path d="M 7100 8400 A 900 900 0 0 0 8000 7500" class="door"/>
+<line x1="4500" y1="5750" x2="3600" y2="5750" class="door" />
+<path d="M 4500 6650 A 900 900 0 0 1 3600 5750" class="door"/>
+<line x1="4500" y1="7550" x2="3600" y2="7550" class="door" />
+<path d="M 4500 8450 A 900 900 0 0 1 3600 7550" class="door"/>
+<line x1="4500" y1="9650" x2="3600" y2="9650" class="door" />
+<path d="M 4500 10550 A 900 900 0 0 1 3600 9650" class="door"/>
+<line x1="4500" y1="12450" x2="3600" y2="12450" class="door" />
+<path d="M 4500 13350 A 900 900 0 0 1 3600 12450" class="door"/>
+<line x1="4500" y1="14950" x2="3600" y2="14950" class="door" />
+<path d="M 4500 15850 A 900 900 0 0 1 3600 14950" class="door"/>
+<line x1="4500" y1="17350" x2="3600" y2="17350" class="door" />
+<path d="M 4500 18250 A 900 900 0 0 1 3600 17350" class="door"/>
+<line x1="4500" y1="21050" x2="3650" y2="21050" class="door" />
+<path d="M 4500 21900 A 850 850 0 0 1 3650 21050" class="door"/>
+<line x1="4500" y1="23350" x2="3600" y2="23350" class="door" />
+<path d="M 4500 24250 A 900 900 0 0 1 3600 23350" class="door"/>
+<line x1="550" y1="23000" x2="550" y2="23750" class="door" />
+<path d="M 1300 23000 A 750 750 0 0 1 550 23750" class="door"/>
+<line x1="2700" y1="23000" x2="2700" y2="23750" class="door" />
+<path d="M 3450 23000 A 750 750 0 0 1 2700 23750" class="door"/>
+<line x1="4950" y1="25000" x2="4950" y2="25900" class="door" />
+<path d="M 5850 25000 A 900 900 0 0 1 4950 25900" class="door"/>
+<line x1="15700" y1="9300" x2="16600" y2="9300" class="door" />
+<path d="M 15700 10200 A 900 900 0 0 0 16600 9300" class="door"/>
+<line x1="15700" y1="12100" x2="16600" y2="12100" class="door" />
+<path d="M 15700 13000 A 900 900 0 0 0 16600 12100" class="door"/>
+<line x1="15700" y1="14900" x2="16600" y2="14900" class="door" />
+<path d="M 15700 15800 A 900 900 0 0 0 16600 14900" class="door"/>
+<line x1="15700" y1="22650" x2="16500" y2="22650" class="door" />
+<path d="M 15700 23450 A 800 800 0 0 0 16500 22650" class="door"/>
+<line x1="15950" y1="23500" x2="15950" y2="24350" class="door" />
+<path d="M 16800 23500 A 850 850 0 0 1 15950 24350" class="door"/>
+<line x1="5100" y1="23800" x2="5100" y2="24700" class="door" />
+<path d="M 6000 23800 A 900 900 0 0 1 5100 24700" class="door"/>
+<line x1="9550" y1="23800" x2="9550" y2="24700" class="door" />
+<path d="M 10450 23800 A 900 900 0 0 1 9550 24700" class="door"/>
+<line x1="11550" y1="23800" x2="11550" y2="24700" class="door" />
+<path d="M 12450 23800 A 900 900 0 0 1 11550 24700" class="door"/>
+<line x1="17000" y1="24000" x2="17850" y2="24000" class="door" />
+<path d="M 17000 24850 A 850 850 0 0 0 17850 24000" class="door"/>
+<line x1="17000" y1="25700" x2="17850" y2="25700" class="door" />
+<path d="M 17000 26550 A 850 850 0 0 0 17850 25700" class="door"/>
+<rect x="-210" y="-210" width="420" height="420" class="column" />
+<rect x="19790" y="-210" width="420" height="420" class="column" />
+<rect x="-210" y="26990" width="420" height="420" class="column" />
+<rect x="19790" y="26990" width="420" height="420" class="column" />
+<rect x="6890" y="-210" width="420" height="420" class="column" />
+<rect x="14790" y="-210" width="420" height="420" class="column" />
+<rect x="-210" y="8790" width="420" height="420" class="column" />
+<rect x="-210" y="16790" width="420" height="420" class="column" />
+<rect x="-210" y="24790" width="420" height="420" class="column" />
+<rect x="19790" y="8790" width="420" height="420" class="column" />
+<rect x="19790" y="17390" width="420" height="420" class="column" />
+<rect x="19790" y="23290" width="420" height="420" class="column" />
+<rect x="6190" y="8790" width="420" height="420" class="column" />
+<rect x="14290" y="8790" width="420" height="420" class="column" />
+<rect x="6190" y="11790" width="420" height="420" class="column" />
+<rect x="14290" y="11790" width="420" height="420" class="column" />
+<rect x="6190" y="14790" width="420" height="420" class="column" />
+<rect x="14290" y="14790" width="420" height="420" class="column" />
+<rect x="6190" y="17790" width="420" height="420" class="column" />
+<rect x="14290" y="17790" width="420" height="420" class="column" />
+<rect x="6290" y="23590" width="420" height="420" class="column" />
+<rect x="13290" y="23590" width="420" height="420" class="column" />
+<rect x="16790" y="23290" width="420" height="420" class="column" />
+<rect x="7700" y="8900" width="6600" height="2250" class="zone-boundary" />
+<rect x="8000" y="9500" width="6000" height="1300" class="furniture" />
+<rect x="8150" y="9050" width="700" height="320" class="chair" />
+<rect x="8150" y="10930" width="700" height="320" class="chair" />
+<rect x="9600" y="9050" width="700" height="320" class="chair" />
+<rect x="9600" y="10930" width="700" height="320" class="chair" />
+<rect x="11050" y="9050" width="700" height="320" class="chair" />
+<rect x="11050" y="10930" width="700" height="320" class="chair" />
+<rect x="12500" y="9050" width="700" height="320" class="chair" />
+<rect x="12500" y="10930" width="700" height="320" class="chair" />
+<text x="11000" y="10150" class="a-text" font-size="480">A大厅3</text>
+<rect x="7700" y="11900" width="6600" height="2250" class="zone-boundary" />
+<rect x="8000" y="12500" width="6000" height="1300" class="furniture" />
+<rect x="8150" y="12050" width="700" height="320" class="chair" />
+<rect x="8150" y="13930" width="700" height="320" class="chair" />
+<rect x="9600" y="12050" width="700" height="320" class="chair" />
+<rect x="9600" y="13930" width="700" height="320" class="chair" />
+<rect x="11050" y="12050" width="700" height="320" class="chair" />
+<rect x="11050" y="13930" width="700" height="320" class="chair" />
+<rect x="12500" y="12050" width="700" height="320" class="chair" />
+<rect x="12500" y="13930" width="700" height="320" class="chair" />
+<text x="11000" y="13150" class="a-text" font-size="480">A大厅2</text>
+<rect x="7700" y="14900" width="6600" height="2250" class="zone-boundary" />
+<rect x="8000" y="15500" width="6000" height="1300" class="furniture" />
+<rect x="8150" y="15050" width="700" height="320" class="chair" />
+<rect x="8150" y="16930" width="700" height="320" class="chair" />
+<rect x="9600" y="15050" width="700" height="320" class="chair" />
+<rect x="9600" y="16930" width="700" height="320" class="chair" />
+<rect x="11050" y="15050" width="700" height="320" class="chair" />
+<rect x="11050" y="16930" width="700" height="320" class="chair" />
+<rect x="12500" y="15050" width="700" height="320" class="chair" />
+<rect x="12500" y="16930" width="700" height="320" class="chair" />
+<text x="11000" y="16150" class="a-text" font-size="480">A大厅1</text>
+<rect x="8600" y="1450" width="4900" height="1150" class="furniture" />
+<rect x="8850" y="950" width="650" height="320" class="chair" />
+<rect x="8850" y="2780" width="650" height="320" class="chair" />
+<rect x="10050" y="950" width="650" height="320" class="chair" />
+<rect x="10050" y="2780" width="650" height="320" class="chair" />
+<rect x="11250" y="950" width="650" height="320" class="chair" />
+<rect x="11250" y="2780" width="650" height="320" class="chair" />
+<rect x="12450" y="950" width="650" height="320" class="chair" />
+<rect x="12450" y="2780" width="650" height="320" class="chair" />
+<rect x="16400" y="850" width="750" height="2000" class="furniture" />
+<rect x="15980" y="950" width="300" height="500" class="chair" />
+<rect x="17270" y="950" width="300" height="500" class="chair" />
+<rect x="15980" y="1650" width="300" height="500" class="chair" />
+<rect x="17270" y="1650" width="300" height="500" class="chair" />
+<rect x="15980" y="2350" width="300" height="500" class="chair" />
+<rect x="17270" y="2350" width="300" height="500" class="chair" />
+<rect x="18100" y="850" width="750" height="2000" class="furniture" />
+<rect x="17680" y="950" width="300" height="500" class="chair" />
+<rect x="18970" y="950" width="300" height="500" class="chair" />
+<rect x="17680" y="1650" width="300" height="500" class="chair" />
+<rect x="18970" y="1650" width="300" height="500" class="chair" />
+<rect x="17680" y="2350" width="300" height="500" class="chair" />
+<rect x="18970" y="2350" width="300" height="500" class="chair" />
+<rect x="750" y="10100" width="3000" height="900" class="furniture" />
+<rect x="900" y="9600" width="500" height="320" class="chair" />
+<rect x="900" y="11180" width="500" height="320" class="chair" />
+<rect x="1700" y="9600" width="500" height="320" class="chair" />
+<rect x="1700" y="11180" width="500" height="320" class="chair" />
+<rect x="2500" y="9600" width="500" height="320" class="chair" />
+<rect x="2500" y="11180" width="500" height="320" class="chair" />
+<rect x="17000" y="16150" width="2000" height="850" class="furniture" />
+<rect x="17050" y="20400" width="1700" height="650" class="furniture" />
+<rect x="16350" y="20250" width="500" height="1000" class="furniture" />
+<rect x="18950" y="20250" width="500" height="1000" class="furniture" />
+<rect x="1200" y="26200" width="4000" height="550" class="furniture" />
+<rect x="6750" y="24050" width="1500" height="1200" class="lift" />
+<text x="7500" y="24650" class="a-text" font-size="320">电梯</text>
+<rect x="6750" y="25600" width="1500" height="1200" class="lift" />
+<text x="7500" y="26200" class="a-text" font-size="320">电梯</text>
+<rect x="11250" y="24050" width="1500" height="1200" class="lift" />
+<text x="12000" y="24650" class="a-text" font-size="320">电梯</text>
+<rect x="11250" y="25600" width="1500" height="1200" class="lift" />
+<text x="12000" y="26200" class="a-text" font-size="320">电梯</text>
+<rect x="17250" y="23850" width="1500" height="1200" class="lift" />
+<text x="18000" y="24450" class="a-text" font-size="320">电梯</text>
+<rect x="17250" y="25550" width="1500" height="1200" class="lift" />
+<text x="18000" y="26150" class="a-text" font-size="320">电梯</text>
+<text x="2200" y="1700" class="a-text" font-size="600">灶台</text>
+<text x="2200" y="4450" class="a-text" font-size="520">食堂一</text>
+<text x="5800" y="1750" class="a-text" font-size="520">食堂二</text>
+<text x="11000" y="850" class="a-text" font-size="560">食堂 · 餐厅</text>
+<text x="17500" y="850" class="a-text" font-size="440">临窗用餐区</text>
+<text x="13200" y="4500" class="a-text" font-size="520">D办公室1</text>
+<text x="13200" y="6300" class="a-text" font-size="520">D办公室2</text>
+<text x="13200" y="8100" class="a-text" font-size="520">D办公室3</text>
+<text x="2150" y="6300" class="a-text" font-size="490">C办公室5</text>
+<text x="2150" y="8250" class="a-text" font-size="490">C办公室4</text>
+<text x="2150" y="10700" class="a-text" font-size="500">D会议室</text>
+<text x="2150" y="13350" class="a-text" font-size="490">C办公室3</text>
+<text x="2150" y="15800" class="a-text" font-size="490">C办公室2</text>
+<text x="2150" y="18700" class="a-text" font-size="490">C办公室1</text>
+<text x="1125" y="21700" class="a-text" font-size="360">卫生间1</text>
+<text x="3375" y="21700" class="a-text" font-size="360">卫生间2</text>
+<text x="2250" y="24050" class="a-text" font-size="520">机房</text>
+<text x="3200" y="26050" class="a-text" font-size="520">前台</text>
+<text x="11000" y="20500" class="a-text" font-size="560">南侧前厅</text>
+<text x="17850" y="10400" class="a-text" font-size="490">B办公室1</text>
+<text x="17850" y="13200" class="a-text" font-size="490">B办公室2</text>
+<text x="17850" y="15250" class="a-text" font-size="490">B办公室3</text>
+<text x="17850" y="18800" class="a-text" font-size="520">A大厅4</text>
+<text x="17850" y="22950" class="a-text" font-size="480">接待厅</text>
+<text x="15200" y="25700" class="a-text" font-size="480">电梯厅</text>
+<text x="10000" y="24900" class="a-text" font-size="480">入口</text>
+<line x1="0" y1="-900" x2="20000" y2="-900" class="dimension" />
+<line x1="0" y1="-250" x2="0" y2="-1150" class="dimension" />
+<line x1="20000" y1="-250" x2="20000" y2="-1150" class="dimension" />
+<text x="10000.0" y="-1150" class="a-dims" font-size="420">20000</text>
+<line x1="-900" y1="0" x2="-900" y2="27200" class="dimension" />
+<line x1="-250" y1="0" x2="-1150" y2="0" class="dimension" />
+<line x1="-250" y1="27200" x2="-1150" y2="27200" class="dimension" />
+<text x="-1250" y="13600.0" class="a-dims" font-size="360" transform="rotate(-90 -1250 13600.0)">27200（待现场复核）</text>
+<text x="10000.0" y="28200" class="a-ref" font-size="520">AI实验室办公室二维平面底图（初稿）</text>
+<text x="10000.0" y="28850" class="a-ref" font-size="330">单位：mm · 总宽按原图 20000 校准 · 内部尺寸、墙厚及门窗位置须现场复核</text>
+<line x1="20700" y1="26500" x2="20700" y2="24900" class="north" stroke-width="45" />
+<path d="M 20700 24400 L 20380 25100 L 20700 24960 L 21020 25100 Z" class="north"/>
+<text x="20700" y="24050" class="a-ref" font-size="360">N</text>
+</svg>
