@@ -13,7 +13,8 @@ description: AI实验室办公室平面布局、功能分区和后续智能化�
 
 | 文件 | 用途 |
 | --- | --- |
-| [DXF 源文件](/layout/office-layout-2d.dxf) | 使用 QCAD、LibreCAD、FreeCAD 或 AutoCAD 继续编辑 |
+| [CAD 下载包（ZIP）](/layout/office-layout-2d-cad.zip) | 推荐下载；解压后得到 DXF 源文件 |
+| [直接打开 DXF](/layout/office-layout-2d.dxf?v=c7d7df8) | 使用 QCAD、LibreCAD、FreeCAD 或 AutoCAD 继续编辑 |
 | [SVG 矢量图](/layout/office-layout-2d.svg) | 在线查看或用于后续网页点位图 |
 | [PDF 打印版](/layout/office-layout-2d.pdf) | 评审、打印和现场标注 |
 | [PNG 预览图](/layout/office-layout-2d.png) | 嵌入文档、Issue 或聊天记录 |
@@ -33,7 +34,16 @@ description: AI实验室办公室平面布局、功能分区和后续智能化�
 | `E-SECURITY` | 门禁与安防点位（预留） |
 | `E-SENSOR` | 环境与人体传感器点位（预留） |
 
-CAD 文件由 `scripts/generate_office_floorplan.py` 生成；修改坐标或图层后，可重复生成 DXF、SVG、PDF 和 PNG，确保各格式内容一致。
+CAD 文件由 `scripts/generate_office_floorplan.py` 生成；修改坐标或图层后，可重复生成 DXF、ZIP、SVG、PDF 和 PNG，确保各格式内容一致。
+
+## 打开 DXF 文件
+
+1. 下载 **CAD 下载包（ZIP）** 并解压，得到 `office-layout-2d.dxf`。
+2. 使用 QCAD、LibreCAD、FreeCAD 或 AutoCAD，选择“文件 → 打开”并载入 DXF。
+3. 图纸单位选择 **毫米（mm）**；按需要显示或隐藏 `A-*`、`S-*`、`E-*` 图层。
+4. 如果只需要查看，不需要编辑，直接使用本页的 SVG 矢量图或 PDF 打印版即可。
+
+macOS 的“预览”通常不能直接显示 DXF；浏览器打开 DXF 时也可能只下载文件，而不会在线预览。
 
 ## 原始平面图参考
 

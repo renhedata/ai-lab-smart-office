@@ -29,7 +29,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/generate_office_floorplan.py
 ```
 
-生成的 DXF、SVG、PDF 和 PNG 位于 `docs/public/layout/`。图纸当前为照片转绘初稿，内部尺寸和门窗位置须经现场复核后再修改生成脚本中的坐标。
+生成的 DXF、CAD ZIP 下载包、SVG、PDF 和 PNG 位于 `docs/public/layout/`。图纸当前为照片转绘初稿，内部尺寸和门窗位置须经现场复核后再修改生成脚本中的坐标。
 
 ## 文档约定
 

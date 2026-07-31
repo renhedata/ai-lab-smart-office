@@ -6,7 +6,10 @@ export default defineConfig({
   base: process.env.GITHUB_PAGES || process.env.GITHUB_ACTIONS ? '/ai-lab-smart-office/' : '/',
   lang: 'zh-CN',
   cleanUrls: true,
-  ignoreDeadLinks: [/^\/layout\/office-layout-2d\.dxf$/],
+  ignoreDeadLinks: [
+    /^\/layout\/office-layout-2d\.dxf(?:\?.*)?$/,
+    /^\/layout\/office-layout-2d-cad\.zip$/,
+  ],
   lastUpdated: true,
   markdown: {
     lineNumbers: true,

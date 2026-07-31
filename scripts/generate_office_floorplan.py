@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import html
 import math
+import zipfile
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -566,11 +567,17 @@ def main() -> None:
     dxf_path = output_dir / "office-layout-2d.dxf"
     pdf_path = output_dir / "office-layout-2d.pdf"
     png_path = output_dir / "office-layout-2d.png"
+    zip_path = output_dir / "office-layout-2d-cad.zip"
     build_svg(svg_path)
     build_dxf(dxf_path)
     cairosvg.svg2pdf(url=str(svg_path), write_to=str(pdf_path))
     cairosvg.svg2png(url=str(svg_path), write_to=str(png_path), output_width=1800)
-    for path in (dxf_path, svg_path, pdf_path, png_path):
+    zip_info = zipfile.ZipInfo(dxf_path.name, date_time=(2026, 7, 31, 0, 0, 0))
+    zip_info.compress_type = zipfile.ZIP_DEFLATED
+    zip_info.external_attr = 0o644 << 16
+    with zipfile.ZipFile(zip_path, "w") as archive:
+        archive.writestr(zip_info, dxf_path.read_bytes())
+    for path in (dxf_path, zip_path, svg_path, pdf_path, png_path):
         print(path)
 
 
