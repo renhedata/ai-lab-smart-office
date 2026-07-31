@@ -81,8 +81,7 @@ WALLS = [
     vwall(WIDTH, 0, HEIGHT, OUTER_WALL),
     # Northern dining and support spaces.
     vwall(4_500, 0, 5_400),
-    vwall(7_100, 0, 9_000),
-    vwall(15_000, 0, 3_600),
+    vwall(7_100, 3_600, 9_000),
     hwall(3_400, 0, 4_500),
     hwall(3_600, 4_500, WIDTH),
     hwall(5_400, 0, WIDTH),
@@ -90,41 +89,34 @@ WALLS = [
     hwall(7_200, 7_100, WIDTH),
     hwall(9_000, 7_100, WIDTH),
     # C zone and western service rooms.
-    vwall(4_500, 5_400, 25_000),
+    vwall(4_500, 5_400, 23_800),
     hwall(7_200, 0, 4_500),
     hwall(9_300, 0, 4_500),
     hwall(12_100, 0, 4_500),
     hwall(14_600, 0, 4_500),
     hwall(17_000, 0, 4_500),
-    hwall(20_700, 0, 4_500),
-    vwall(2_250, 20_700, 23_000),
-    hwall(23_000, 0, 4_500),
-    hwall(25_000, 0, 6_500),
+    hwall(19_800, 0, 4_500),
+    vwall(2_250, 19_800, 21_700),
+    hwall(21_700, 0, 4_500),
     # B zone and reception.
-    vwall(15_700, 9_000, 23_500),
+    vwall(15_700, 9_000, 23_800),
     hwall(11_800, 15_700, WIDTH),
     hwall(14_600, 15_700, WIDTH),
     hwall(17_600, 15_700, WIDTH),
     hwall(22_400, 15_700, WIDTH),
-    hwall(23_500, 15_700, WIDTH),
-    # Southern lift and entrance zone.
-    hwall(23_800, 4_500, 15_700),
+    hwall(23_800, 0, WIDTH),
+    # Southern machine room, front desk, entrance and lift zone.
     vwall(6_500, 23_800, HEIGHT),
-    vwall(9_000, 23_800, HEIGHT),
-    vwall(11_000, 23_800, HEIGHT),
-    vwall(13_500, 23_800, HEIGHT),
-    vwall(17_000, 23_500, HEIGHT),
-    hwall(25_350, 6_500, 9_000),
-    hwall(25_350, 11_000, 13_500),
-    hwall(25_350, 17_000, WIDTH),
+    vwall(11_500, 23_800, HEIGHT),
+    vwall(14_500, 23_800, HEIGHT),
+    vwall(17_500, 23_800, HEIGHT),
+    hwall(25_500, 17_500, WIDTH),
 ]
 
 
 DOORS = [
-    Door("h", HEIGHT, 9_500, 1_200, "up"),
+    Door("h", HEIGHT, 12_300, 1_400, "up"),
     Door("h", 3_400, 3_350, 900, "up"),
-    Door("h", 3_600, 8_200, 1_000, "up"),
-    Door("h", 3_600, 14_000, 900, "up"),
     Door("v", 4_500, 2_250, 900, "left"),
     Door("v", 4_500, 4_050, 900, "left"),
     Door("v", 7_100, 3_900, 900, "right"),
@@ -136,21 +128,20 @@ DOORS = [
     Door("v", 4_500, 12_450, 900, "left"),
     Door("v", 4_500, 14_950, 900, "left"),
     Door("v", 4_500, 17_350, 900, "left"),
-    Door("v", 4_500, 21_050, 850, "left"),
-    Door("v", 4_500, 23_350, 900, "left"),
-    Door("h", 23_000, 550, 750, "down"),
-    Door("h", 23_000, 2_700, 750, "down"),
-    Door("h", 25_000, 4_950, 900, "down"),
+    Door("v", 4_500, 20_150, 850, "left"),
+    Door("v", 4_500, 22_050, 850, "left"),
+    Door("h", 21_700, 500, 750, "up"),
     Door("v", 15_700, 9_300, 900, "right"),
     Door("v", 15_700, 12_100, 900, "right"),
     Door("v", 15_700, 14_900, 900, "right"),
     Door("v", 15_700, 22_650, 800, "right"),
-    Door("h", 23_500, 15_950, 850, "down"),
-    Door("h", 23_800, 5_100, 900, "down"),
-    Door("h", 23_800, 9_550, 900, "down"),
-    Door("h", 23_800, 11_550, 900, "down"),
-    Door("v", 17_000, 24_000, 850, "right"),
-    Door("v", 17_000, 25_700, 850, "right"),
+    Door("h", 23_800, 5_150, 900, "down"),
+    Door("h", 23_800, 7_200, 900, "down"),
+    Door("h", 23_800, 15_950, 850, "down"),
+    Door("v", 11_500, 24_900, 900, "right"),
+    Door("v", 14_500, 24_900, 900, "right"),
+    Door("v", 17_500, 24_100, 850, "right"),
+    Door("v", 17_500, 25_850, 850, "right"),
 ]
 
 
@@ -158,8 +149,9 @@ WINDOWS = [
     Window("h", 0, 450, 3_900),
     Window("h", 0, 7_700, 14_400),
     Window("h", 0, 15_500, 19_550),
-    Window("h", HEIGHT, 450, 6_000),
-    Window("h", HEIGHT, 13_900, 16_500),
+    Window("h", HEIGHT, 450, 5_900),
+    Window("h", HEIGHT, 6_900, 10_900),
+    Window("h", HEIGHT, 14_900, 17_000),
     Window("v", 0, 550, 2_700),
     Window("v", 0, 3_850, 5_150),
     Window("v", 0, 5_750, 6_850),
@@ -182,9 +174,7 @@ WINDOWS = [
 LABELS = [
     Label("灶台", 2_200, 1_700, 600),
     Label("食堂一", 2_200, 4_450, 520),
-    Label("食堂二", 5_800, 1_750, 520),
-    Label("食堂 · 餐厅", 11_000, 850, 560),
-    Label("临窗用餐区", 17_500, 850, 440),
+    Label("食堂 · 餐厅", 12_250, 750, 560),
     Label("D办公室1", 13_200, 4_500, 520),
     Label("D办公室2", 13_200, 6_300, 520),
     Label("D办公室3", 13_200, 8_100, 520),
@@ -194,10 +184,11 @@ LABELS = [
     Label("C办公室3", 2_150, 13_350, 490),
     Label("C办公室2", 2_150, 15_800, 490),
     Label("C办公室1", 2_150, 18_700, 490),
-    Label("卫生间1", 1_125, 21_700, 360),
-    Label("卫生间2", 3_375, 21_700, 360),
-    Label("机房", 2_250, 24_050, 520),
-    Label("前台", 3_200, 26_050, 520),
+    Label("卫生间1", 1_125, 20_750, 340),
+    Label("卫生间2", 3_375, 20_750, 340),
+    Label("卫生间3", 2_250, 22_750, 360),
+    Label("机房", 3_250, 25_450, 520),
+    Label("前台", 9_000, 25_050, 520),
     Label("A大厅3", 11_000, 10_200, 520),
     Label("A大厅2", 11_000, 13_200, 520),
     Label("A大厅1", 11_000, 16_200, 520),
@@ -206,22 +197,22 @@ LABELS = [
     Label("B办公室2", 17_850, 13_200, 490),
     Label("B办公室3", 17_850, 15_250, 490),
     Label("A大厅4", 17_850, 18_800, 520),
-    Label("接待厅", 17_850, 22_950, 480),
-    Label("电梯厅", 15_200, 25_700, 480),
-    Label("入口", 10_000, 24_900, 480),
+    Label("接待厅", 17_850, 23_050, 440),
+    Label("电梯厅", 16_000, 25_700, 440),
+    Label("入口", 13_000, 25_700, 480),
 ]
 
 
 COLUMNS = [
     (0, 0), (WIDTH, 0), (0, HEIGHT), (WIDTH, HEIGHT),
-    (7_100, 0), (15_000, 0),
-    (0, 9_000), (0, 17_000), (0, 25_000),
-    (WIDTH, 9_000), (WIDTH, 17_600), (WIDTH, 23_500),
+    (4_500, 0), (12_500, 0),
+    (0, 9_000), (0, 17_000), (0, 23_800),
+    (WIDTH, 9_000), (WIDTH, 17_600), (WIDTH, 23_800),
     (6_400, 9_000), (14_500, 9_000),
     (6_400, 12_000), (14_500, 12_000),
     (6_400, 15_000), (14_500, 15_000),
     (6_400, 18_000), (14_500, 18_000),
-    (6_500, 23_800), (13_500, 23_800), (17_000, 23_500),
+    (6_500, 23_800), (14_500, 23_800), (17_500, 23_800),
 ]
 
 
@@ -331,8 +322,8 @@ def add_furniture_dxf(msp) -> None:
             x = 8_150 + index * 1_450
             add_dxf_rect(msp, x, y - 450, 700, 320, "A-FURN")
             add_dxf_rect(msp, x, y + 1_430, 700, 320, "A-FURN")
-    add_dxf_rect(msp, 8_600, 1_450, 4_900, 1_150, "A-FURN")
-    for x in (8_850, 10_050, 11_250, 12_450):
+    add_dxf_rect(msp, 7_800, 1_450, 7_600, 1_150, "A-FURN")
+    for x in (8_000, 9_200, 10_400, 11_600, 12_800, 14_000):
         add_dxf_rect(msp, x, 950, 650, 320, "A-FURN")
         add_dxf_rect(msp, x, 2_780, 650, 320, "A-FURN")
     add_dxf_rect(msp, 750, 10_100, 3_000, 900, "A-FURN")
@@ -340,8 +331,8 @@ def add_furniture_dxf(msp) -> None:
     add_dxf_rect(msp, 17_050, 20_400, 1_700, 650, "A-FURN")
     add_dxf_rect(msp, 16_350, 20_250, 500, 1_000, "A-FURN")
     add_dxf_rect(msp, 18_950, 20_250, 500, 1_000, "A-FURN")
-    add_dxf_rect(msp, 1_200, 26_200, 4_000, 550, "A-FURN")
-    for x, y in ((6_750, 24_050), (6_750, 25_600), (11_250, 24_050), (11_250, 25_600), (17_250, 23_850), (17_250, 25_550)):
+    add_dxf_rect(msp, 7_250, 25_850, 3_500, 550, "A-FURN")
+    for x, y in ((17_750, 24_050), (17_750, 25_750)):
         add_dxf_rect(msp, x, y, 1_500, 1_200, "A-FURN")
 
 
@@ -435,15 +426,10 @@ def add_furniture_svg(parts: list[str]) -> None:
             parts.append(svg_rect(x, y - 450, 700, 320, "chair"))
             parts.append(svg_rect(x, y + 1_430, 700, 320, "chair"))
         parts.append(svg_text(Label(f"A大厅{4 - index}", 11_000, y + 650, 480)))
-    parts.append(svg_rect(8_600, 1_450, 4_900, 1_150, "furniture"))
-    for x in (8_850, 10_050, 11_250, 12_450):
+    parts.append(svg_rect(7_800, 1_450, 7_600, 1_150, "furniture"))
+    for x in (8_000, 9_200, 10_400, 11_600, 12_800, 14_000):
         parts.append(svg_rect(x, 950, 650, 320, "chair"))
         parts.append(svg_rect(x, 2_780, 650, 320, "chair"))
-    for x in (16_400, 18_100):
-        parts.append(svg_rect(x, 850, 750, 2_000, "furniture"))
-        for y in (950, 1_650, 2_350):
-            parts.append(svg_rect(x - 420, y, 300, 500, "chair"))
-            parts.append(svg_rect(x + 870, y, 300, 500, "chair"))
     parts.append(svg_rect(750, 10_100, 3_000, 900, "furniture"))
     for x in (900, 1_700, 2_500):
         parts.append(svg_rect(x, 9_600, 500, 320, "chair"))
@@ -452,8 +438,8 @@ def add_furniture_svg(parts: list[str]) -> None:
     parts.append(svg_rect(17_050, 20_400, 1_700, 650, "furniture"))
     parts.append(svg_rect(16_350, 20_250, 500, 1_000, "furniture"))
     parts.append(svg_rect(18_950, 20_250, 500, 1_000, "furniture"))
-    parts.append(svg_rect(1_200, 26_200, 4_000, 550, "furniture"))
-    for x, y in ((6_750, 24_050), (6_750, 25_600), (11_250, 24_050), (11_250, 25_600), (17_250, 23_850), (17_250, 25_550)):
+    parts.append(svg_rect(7_250, 25_850, 3_500, 550, "furniture"))
+    for x, y in ((17_750, 24_050), (17_750, 25_750)):
         parts.append(svg_rect(x, y, 1_500, 1_200, "lift"))
         parts.append(svg_text(Label("电梯", x + 750, y + 600, 320)))
 
@@ -505,8 +491,8 @@ def build_svg(path: Path) -> None:
         svg_rect(0, 5_400, 4_500, 15_300, "zone-c"),
         svg_rect(15_700, 9_000, 4_300, 13_400, "zone-b"),
         svg_rect(4_500, 9_000, 11_200, 14_800, "zone-common"),
-        svg_rect(0, 20_700, 4_500, 6_500, "zone-service"),
-        svg_rect(4_500, 23_800, 15_500, 3_400, "zone-service"),
+        svg_rect(0, 19_800, 4_500, 4_000, "zone-service"),
+        svg_rect(0, 23_800, WIDTH, 3_400, "zone-service"),
     ]
     for wall in WALLS:
         for start, end in wall_parts(wall):
