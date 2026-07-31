@@ -25,6 +25,7 @@ export default defineConfig({
           text: '方案设计',
           items: [
             { text: '项目总览', link: '/guide/project-overview' },
+            { text: '办公室布局', link: '/guide/office-layout' },
             { text: '系统架构', link: '/guide/architecture' },
             { text: '协作与变更流程', link: '/guide/workflow' },
             { text: '决策记录', link: '/guide/decision-log' },

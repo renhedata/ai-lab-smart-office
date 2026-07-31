@@ -33,6 +33,7 @@ features:
 | 你要做什么 | 从这里开始 |
 | --- | --- |
 | 明确范围、目标和阶段 | [项目总览](/guide/project-overview) |
+| 查看空间布局和功能分区 | [办公室布局](/guide/office-layout) |
 | 规划网络、弱电与平台关系 | [系统架构](/guide/architecture) |
 | 新增或推进一项工程工作 | [协作与变更流程](/guide/workflow) |
 | 采购设备、维护资产信息 | [采购与设备台账](/management/procurement) |
