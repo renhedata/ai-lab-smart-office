@@ -5,15 +5,41 @@ description: AI实验室办公室平面布局、功能分区和后续智能化�
 
 # 办公室布局
 
-## 平面总览
+## 二维 CAD 底图
 
-[![AI实验室办公室平面布局](/layout/office-layout-clean.png)](/layout/office-layout-clean.png)
+[![AI实验室办公室二维平面底图](/layout/office-layout-2d.svg)](/layout/office-layout-2d.svg)
 
-点击图片可查看大图。当前版本在保留原始房间、门向和尺寸标注的基础上，完成了裁切、灰度校正、对比度增强和锐化，便于在线查阅与后续标注。
+点击图片可查看矢量大图。二维底图采用毫米单位和独立图层，可以继续补充准确尺寸、弱电点位与智能化设备。
+
+| 文件 | 用途 |
+| --- | --- |
+| [DXF 源文件](/layout/office-layout-2d.dxf) | 使用 QCAD、LibreCAD、FreeCAD 或 AutoCAD 继续编辑 |
+| [SVG 矢量图](/layout/office-layout-2d.svg) | 在线查看或用于后续网页点位图 |
+| [PDF 打印版](/layout/office-layout-2d.pdf) | 评审、打印和现场标注 |
+| [PNG 预览图](/layout/office-layout-2d.png) | 嵌入文档、Issue 或聊天记录 |
 
 ::: warning 图纸使用边界
-本图来自现场平面图照片，适合作为空间定位和方案讨论的底图；施工尺寸、墙体条件和设备安装位置仍须以现场复核及正式施工图为准。
+这是依据现场平面图照片转绘的初稿：总宽按图面 `20000 mm` 校准，总高暂按图面 `27200 mm` 转绘；内部尺寸、墙厚、柱位和门窗位置仍须现场复核。当前文件适合作为空间定位和方案讨论底图，不应直接作为拆改或结构施工依据。
 :::
+
+## CAD 图层
+
+| 图层 | 内容 |
+| --- | --- |
+| `A-WALL` / `A-DOOR` / `A-WIND` | 墙体、门和窗 |
+| `S-COLS` | 柱位 |
+| `A-FURN` / `A-TEXT` / `A-DIMS` | 家具、文字和尺寸 |
+| `E-NETWORK` | 网络、AP 与弱电点位（预留） |
+| `E-SECURITY` | 门禁与安防点位（预留） |
+| `E-SENSOR` | 环境与人体传感器点位（预留） |
+
+CAD 文件由 `scripts/generate_office_floorplan.py` 生成；修改坐标或图层后，可重复生成 DXF、SVG、PDF 和 PNG，确保各格式内容一致。
+
+## 原始平面图参考
+
+[![经清晰化处理的原始办公室平面图](/layout/office-layout-clean.png)](/layout/office-layout-clean.png)
+
+该版本保留原始房间、门向和尺寸标注，并完成裁切、灰度校正、对比度增强和锐化，供转绘核对与现场复测使用。
 
 ## 功能分区
 
@@ -40,4 +66,3 @@ description: AI实验室办公室平面布局、功能分区和后续智能化�
 4. **设备与自动化层**：控制面板、场景触发器、实验设备和能源计量点位。
 
 新增设备时，建议使用“分区—房间—设备类型—序号”的统一编号，例如 `C-03-AP-01`，并同步写入设备台账与验收记录。
-

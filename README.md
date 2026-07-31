@@ -21,6 +21,16 @@ npm run docs:build
 
 生成的静态文件在 `docs/.vitepress/dist/`，可部署到 GitHub Pages、公司 NAS 或任意 Web 服务器。
 
+## 生成二维 CAD 底图
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r scripts/requirements-cad.txt
+.venv/bin/python scripts/generate_office_floorplan.py
+```
+
+生成的 DXF、SVG、PDF 和 PNG 位于 `docs/public/layout/`。图纸当前为照片转绘初稿，内部尺寸和门窗位置须经现场复核后再修改生成脚本中的坐标。
+
 ## 文档约定
 
 - 方案、设备配置、决策和验收标准应直接维护在 `docs/`。
