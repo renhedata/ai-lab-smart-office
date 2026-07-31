@@ -1,0 +1,29 @@
+# 当前网络现状 (/docs/guide/architecture)
+
+本页记录已经在运行的网络基线，用于改造前核对和故障排查；如果你要规划新增布线、VLAN 或智能化网络，请转到[网络与弱电规划](/docs/implementation/network/)。
+
+## 当前网络架构
+
+![AI实验室网络架构概览](/network-overview.svg)
+
+文档页展示的是概览图，源文件位于 `public/network-overview.mmd`；完整的实际拓扑保留在 `public/network-architecture.mmd`，仅作为配置与排障时的技术参考。
+
+## 贵阳网络摘要
+
+- **边界与出口**：CCR1009（`192.168.99.1`，RouterOS 7.19.3）承担网关、DHCP、DNS、防火墙和策略路由；三路 PPPoE 为主出口，200M 静态专线（VLAN 214）为备用出口及公网入站。
+- **交换与无线**：CCR 与 H3C SW1 通过 `bond-sw1` 的四链路 LACP 互联；SW1 分别与 SW2、SW3 使用四链路 LACP Trunk；爱快 AP 接入 SW1 `GE1/0/43` Trunk。
+- **网段**：Office/RD 为 VLAN 10（`192.168.10.0/23`），IoT 为 VLAN 20（`192.168.20.0/23`），管理网为 VLAN 99（`192.168.99.0/24`）。
+- **策略出口**：Arch Linux 旁路由（`192.168.10.62`）通过 Hysteria TProxy 处理非 CN、`rhzy.ai` 与远端私网的 TCP/UDP 策略路由；公网 `:443` 入站 DNAT 到后端时，经旁路由保持对称回程。
+
+## 遵义互联
+
+遵义侧使用 CCR1072（RouterOS 7.23.2），承载本地 WireGuard 与 LAN/OVPN 网段。两地通过 GRE 连接，公网端点已脱敏，隧道地址为 `172.16.1.2` 与 `172.16.1.3`。
+
+## 运维约束
+
+1. VLAN 10、20、99 的端口成员、Trunk 的 tagged/native 设置和 LACP 对端必须与图表保持一致。
+2. 每次变更路由标记、NAT、Hysteria 或 GRE 配置后，应验证远端私网与公网入站的对称回程。
+3. CCR、交换机、旁路由的配置备份与恢复步骤必须关联到变更记录，且不得提交密码、私钥或令牌。
+4. GRE 当前按明文记录；若后续承载敏感业务流量，应评估叠加加密隧道及密钥轮换方案。
+
+下一步可补充机柜端口映射、AP 覆盖图、各 VLAN 的访问控制矩阵和故障切换演练记录。

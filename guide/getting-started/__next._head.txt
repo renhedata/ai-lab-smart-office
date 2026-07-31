@@ -1,6 +1,0 @@
-1:"$Sreact.fragment"
-2:I[97367,["/ai-lab-smart-office/_next/static/chunks/3hqs4kjhzpt4r.js","/ai-lab-smart-office/_next/static/chunks/2ftp25h17-awf.js","/ai-lab-smart-office/_next/static/chunks/2a35y8vvamogv.js"],"ViewportBoundary"]
-3:I[97367,["/ai-lab-smart-office/_next/static/chunks/3hqs4kjhzpt4r.js","/ai-lab-smart-office/_next/static/chunks/2ftp25h17-awf.js","/ai-lab-smart-office/_next/static/chunks/2a35y8vvamogv.js"],"MetadataBoundary"]
-4:"$Sreact.suspense"
-5:I[27201,["/ai-lab-smart-office/_next/static/chunks/3hqs4kjhzpt4r.js","/ai-lab-smart-office/_next/static/chunks/2ftp25h17-awf.js","/ai-lab-smart-office/_next/static/chunks/2a35y8vvamogv.js"],"IconMark"]
-0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"使用指南 | AI实验室 · 智能办公室"}],["$","meta","1",{"name":"description","content":"了解智能办公室文档库的导航、搜索、阅读与维护方法。"}],["$","link","2",{"rel":"icon","href":"/ai-lab-smart-office/favicon.svg"}],["$","$L5","3",{}]]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"8RMoH3n7gKmewIxxMwoOd"}
