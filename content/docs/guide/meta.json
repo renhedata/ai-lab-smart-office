@@ -1,0 +1,12 @@
+{
+  "title": "规划与协作",
+  "defaultOpen": true,
+  "collapsible": true,
+  "pages": [
+    "project-overview",
+    "office-layout",
+    "architecture",
+    "workflow",
+    "decision-log"
+  ]
+}

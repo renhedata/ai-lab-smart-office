@@ -1,0 +1,6 @@
+{
+  "title": "交付与运维",
+  "defaultOpen": true,
+  "collapsible": true,
+  "pages": ["procurement", "acceptance"]
+}

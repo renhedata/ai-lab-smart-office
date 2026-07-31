@@ -1,20 +1,8 @@
 {
   "pages": [
-    "---快速开始---",
-    "./index",
-    "./guide/getting-started",
-    "./guide/project-overview",
-    "---方案设计---",
-    "./guide/office-layout",
-    "./implementation/smart-office-plan",
-    "./implementation/network",
-    "---实施交付---",
-    "./implementation/automation",
-    "./management/procurement",
-    "./management/acceptance",
-    "---运行维护---",
-    "./guide/architecture",
-    "./guide/workflow",
-    "./guide/decision-log"
+    "index",
+    "guide",
+    "implementation",
+    "management"
   ]
 }

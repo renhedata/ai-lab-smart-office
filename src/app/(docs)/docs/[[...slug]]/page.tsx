@@ -1,14 +1,16 @@
+import * as FilesComponents from "fumadocs-ui/components/files";
+import * as TabsComponents from "fumadocs-ui/components/tabs";
 import {
   DocsBody,
   DocsDescription,
   DocsPage,
   DocsTitle,
-  EditOnGitHub,
 } from "fumadocs-ui/layouts/notebook/page";
 import defaultMdxComponents from "fumadocs-ui/mdx";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { LLMCopyButton, ViewOptions } from "@/components/ai/page-actions";
 import { source } from "@/lib/source";
 
 type PageProps = {
@@ -21,16 +23,22 @@ export default async function Page({ params }: PageProps) {
   if (!page) notFound();
 
   const MDX = page.data.body;
+  const markdownSlug = page.slugs.length > 0 ? page.slugs.join("/") : "index";
+  const markdownUrl = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/markdown/${markdownSlug}.md`;
 
   return (
     <DocsPage toc={page.data.toc} tableOfContent={{ style: "clerk" }} full={page.data.full}>
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
-      <EditOnGitHub
-        href={`https://github.com/renhedata/ai-lab-smart-office/edit/main/content/docs/${page.path}`}
-      />
+      <div className="flex flex-row items-center gap-2 border-b pt-2 pb-6">
+        <LLMCopyButton markdownUrl={markdownUrl} />
+        <ViewOptions
+          markdownUrl={markdownUrl}
+          githubUrl={`https://github.com/renhedata/ai-lab-smart-office/blob/main/content/docs/${page.path}`}
+        />
+      </div>
       <DocsBody>
-        <MDX components={defaultMdxComponents} />
+        <MDX components={{ ...defaultMdxComponents, ...TabsComponents, ...FilesComponents }} />
       </DocsBody>
     </DocsPage>
   );

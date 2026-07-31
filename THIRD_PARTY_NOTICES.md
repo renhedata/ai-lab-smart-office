@@ -2,7 +2,8 @@
 
 The documentation application structure follows the open-source documentation app from
 [Better T Stack](https://github.com/AmanVarshney01/create-better-t-stack/tree/main/apps/web),
-using its Next.js + Fumadocs Notebook layout approach.
+using its Next.js + Fumadocs Notebook layout approach. The page action component is derived
+from Better T Stack's `apps/web/src/components/ai/page-actions.tsx` implementation.
 
 ## Better T Stack
 

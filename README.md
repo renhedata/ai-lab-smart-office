@@ -1,6 +1,6 @@
 # AI实验室 DIY 智能办公室方案与实施
 
-这是办公室智能化改造项目的文档源仓库。项目资料以 MDX 维护，并通过 Next.js + Fumadocs 生成文档站。站点复用 Better T Stack 文档应用的 Notebook 布局方案，只使用 Fumadocs 原生导航、搜索、页面组件和官方主题。
+这是办公室智能化改造项目的文档源仓库。项目资料以 MDX 维护，并通过 Next.js + Fumadocs 生成文档站。站点复用 Better T Stack 文档应用的 Notebook 布局和页面操作方案；导航、搜索、侧栏、MDX 页面与主题仍由 Fumadocs 提供。
 
 在线文档：https://renhedata.github.io/ai-lab-smart-office/
 
@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-打开终端显示的本地地址（默认是 `http://localhost:3000/ai-lab-smart-office/`）。
+打开终端显示的文档地址（默认是 `http://localhost:3000/ai-lab-smart-office/docs/`）；站点根地址会直接进入这篇文档。
 
 ## 构建静态站点
 

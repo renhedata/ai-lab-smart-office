@@ -1,0 +1,6 @@
+{
+  "title": "方案与实施",
+  "defaultOpen": true,
+  "collapsible": true,
+  "pages": ["smart-office-plan", "network", "automation"]
+}
