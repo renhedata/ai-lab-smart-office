@@ -4,42 +4,80 @@ layout: home
 hero:
   name: AI实验室
   text: DIY 智能办公室方案与实施
-  tagline: 从空间、网络到自动化与验收，把每一项工程决策沉淀为可执行、可追溯的文档。
+  tagline: 按“了解现状→完成设计→现场实施→验收维护”推进，让每项决定都有依据、每次变更都可追溯。
   image:
     src: /logo.svg
     alt: 智能办公室
   actions:
     - theme: brand
+      text: 第一次使用，从这里开始
+      link: /guide/getting-started
+    - theme: alt
       text: 查看项目总览
       link: /guide/project-overview
-    - theme: alt
-      text: 开始维护文档
-      link: /guide/workflow
 
 features:
   - icon: 🧭
-    title: 方案先行
-    details: 用需求、设计决策、拓扑和点位表，确保每次施工都有明确依据。
+    title: 第一次查看
+    details: 用几分钟了解这个文档库、项目路径，以及导航、搜索和页面目录的用法。
+    link: /guide/getting-started
+    linkText: 打开使用指南
+  - icon: 📐
+    title: 做方案
+    details: 先核对办公室布局和现场边界，再设计网络、灯光、窗帘与环境联动。
+    link: /guide/office-layout
+    linkText: 从空间布局开始
   - icon: 🔧
-    title: 工程可执行
-    details: 将采购、施工、联调、验收拆成 Issue 与清单，避免口头协作丢失信息。
-  - icon: ♻️
-    title: 长期可运维
-    details: 设备台账、自动化规则、配置文件和故障处理手册始终与现场同步。
+    title: 现场实施
+    details: 按开工前清单、试点范围和验收标准推进，并保留可复核证据。
+    link: /management/acceptance
+    linkText: 查看施工与验收
+  - icon: 🗂️
+    title: 维护项目
+    details: 把已稳定的方案写入文档，把待办、变更、决策和验收记录放到正确位置。
+    link: /guide/workflow
+    linkText: 了解协作流程
 ---
 
-## 当前文档导航
+## 项目现在在哪里？
 
-| 你要做什么 | 从这里开始 |
+::: warning 当前阶段：方案梳理与现场确认
+仓库已包含办公室布局初稿、现有网络说明、智能化总体方案与自动化场景建议，但现场尺寸、回路、设备接口、负责人和最终采购范围仍待确认。这些文档不代表方案已批准或工程已完成。
+:::
+
+### 下一步
+
+1. 按[办公室布局](/guide/office-layout)和[智能化总体方案](/implementation/smart-office-plan)完成现场复核。
+2. 在[项目总览](/guide/project-overview)中确认范围、负责人和阶段交付物。
+3. 评审首轮试点范围，再为已确认的采购、施工和验收工作建立 Issue。
+
+### 待完成清单
+
+- [ ] 指定空间、网络、智能化、采购与验收负责人。
+- [ ] 复核平面图的内部尺寸、墙体、门窗和机房位置。
+- [ ] 逐回路确认灯具、配电、窗帘供电、空调与新风接口。
+- [ ] 确认试点区域、设备数量、预算与可复核的验收标准。
+- [ ] 试点通过后，再决定是否扩展到其他区域。
+
+## 按任务找资料
+
+| 你现在要做什么 | 从这里开始 |
 | --- | --- |
-| 明确范围、目标和阶段 | [项目总览](/guide/project-overview) |
-| 查看空间布局和功能分区 | [办公室布局](/guide/office-layout) |
-| 规划网络、弱电与平台关系 | [系统架构](/guide/architecture) |
-| 规划自动灯、窗帘和环境联动 | [智能化总体方案](/implementation/smart-office-plan) |
-| 新增或推进一项工程工作 | [协作与变更流程](/guide/workflow) |
-| 采购设备、维护资产信息 | [采购与设备台账](/management/procurement) |
-| 联调与交付现场系统 | [施工与验收](/management/acceptance) |
+| 了解文档库怎么用 | [使用指南](/guide/getting-started) |
+| 明确项目范围、交付物和阶段 | [项目总览](/guide/project-overview) |
+| 核对办公室空间与功能分区 | [办公室布局](/guide/office-layout) |
+| 了解现有网络与两地互联 | [当前网络现状](/guide/architecture) |
+| 设计灯光、窗帘、环境与控制平台 | [智能化总体方案](/implementation/smart-office-plan) |
+| 检查网络与弱电开工条件 | [网络与弱电规划](/implementation/network) |
+| 定义、测试自动化规则 | [自动化场景](/implementation/automation) |
+| 采购设备或维护资产信息 | [采购与设备台账](/management/procurement) |
+| 联调、验收与交付现场系统 | [施工与验收](/management/acceptance) |
+| 记录变更或重要技术决定 | [协作与变更流程](/guide/workflow) · [决策记录](/guide/decision-log) |
 
-::: tip 文档库使用原则
-这里是项目的“唯一事实来源”。现场的口头结论、临时改线和配置调整，都应在对应的文档或 Issue 中留下记录。
+::: tip 快速找到内容
+点击页面顶部的“搜索方案、设备、房间…”，或按 `⌘ K`（macOS）/ `Ctrl K`（Windows、Linux），输入房间、设备、协议或任务名称，即可直接跳到相关页面标题。
+:::
+
+::: info 记录原则
+稳定的方案、规范和结论放在文档；待办、现场问题和待验收事项放在 Issue；影响成本、体验、安全或维护的决定写入决策记录。
 :::
