@@ -1,3 +1,3 @@
 :HL["/ai-lab-smart-office/_next/static/chunks/1vwqdht5-cn-u.css","style"]
 :HL["/ai-lab-smart-office/layout/office-layout-2d.svg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"(home)","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"Fn3M-GA4MjC4_xan1bbtM"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"(home)","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"mFlf-ymZAPbv1G8CQBRWQ"}
