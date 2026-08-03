@@ -2,6 +2,7 @@
   "pages": [
     "index",
     "guide",
+    "decisions",
     "implementation",
     "management"
   ]

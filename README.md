@@ -33,7 +33,7 @@ python3 -m venv .venv
 
 ## 文档约定
 
-- 方案、设备配置、决策和验收标准应直接维护在 `content/docs/`。
+- 方案、设备配置和验收标准应直接维护在 `content/docs/`；每一份重要决策的 ADR 统一放在 `content/docs/decisions/`，规范见 `content/docs/guide/decision-log.mdx`。
 - 图纸源文件放 `diagrams/`，并在文档中引用其导出图或链接。
 - 大文件（CAD、视频、扫描件、合同）不提交 Git；保存到 NAS/对象存储，并在相应 Markdown 中放链接和版本号。
 - 任何影响预算、拓扑、施工或自动化逻辑的变更，先创建 Issue，再通过 Pull Request 审核并合并。

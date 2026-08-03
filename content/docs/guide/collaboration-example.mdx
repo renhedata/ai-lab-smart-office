@@ -111,7 +111,7 @@ import { Step, Steps } from "fumadocs-ui/components/steps";
 3. 窗帘控制器必须具备开/关互锁；人工开、停、关的优先级高于自动遮阳和演示场景。
 4. 自动化平台只负责编排和记录，不能成为灯光、窗帘的唯一控制路径。
 
-项目负责人批准决策和预算后，把主 Issue 状态改为 `已批准`。对应的 ADR 与方案修改通过 Pull Request 评审并合并，写法参考[决策记录](/docs/guide/decision-log/)。
+项目负责人批准决策和预算后，把主 Issue 状态改为 `已批准`。对应的 ADR 放入[决策档案](/docs/decisions/)，并与方案修改一同通过 Pull Request 评审和合并；具体写法参考[决策记录规范](/docs/guide/decision-log/)。
 
 </Step>
 
@@ -231,7 +231,7 @@ import { Step, Steps } from "fumadocs-ui/components/steps";
 | --- | --- | --- |
 | 想法 | 任意成员 | 问题、区域和期望结果可被理解 |
 | 待评审 | 项目负责人 | 现场边界、备选方案、预算影响和验收标准 |
-| 已批准 | 项目负责人 | 决策记录、负责人、预算和计划日期 |
+| 已批准 | 项目负责人 | 负责人、预算和计划日期；如涉及重要取舍，还须关联已批准的 ADR |
 | 执行中 | 各任务负责人 | 持续回报事实、阻塞、证据和下一步 |
 | 待验收 | 实施负责人申请 | 安装、配置、文档、台账和自测完成 |
 | 已完成 | 验收负责人确认 | 测试通过、遗留项明确、备份和移交完成 |
@@ -247,6 +247,8 @@ import { Step, Steps } from "fumadocs-ui/components/steps";
 <Cards>
 
 <Card title="协作与变更流程" description="了解 Issue、Pull Request 和项目状态的通用规则。" href="/docs/guide/workflow/" />
+
+<Card title="决策档案" description="查找已登记 ADR，或新建一份重要取舍的记录。" href="/docs/decisions/" />
 
 <Card title="智能化总体方案" description="查看灯光、窗帘、传感器和本地自动化的整体设计。" href="/docs/implementation/smart-office-plan/" />
 
