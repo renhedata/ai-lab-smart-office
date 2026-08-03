@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { DiscussionButton, LLMCopyButton, ViewOptions } from "@/components/ai/page-actions";
+import { GiscusComments } from "@/components/giscus-comments";
 import { githubRepositoryUrl } from "@/lib/layout.shared";
 import { source } from "@/lib/source";
 
@@ -41,6 +42,7 @@ export default async function Page({ params }: PageProps) {
       </div>
       <DocsBody>
         <MDX components={{ ...defaultMdxComponents, ...TabsComponents, ...FilesComponents }} />
+        <GiscusComments pageKey={page.path} />
       </DocsBody>
     </DocsPage>
   );
@@ -55,8 +57,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const page = source.getPage(slug);
   if (!page) notFound();
 
+  const pagePath = page.slugs.length > 0 ? `/${page.slugs.join("/")}` : "";
+
   return {
     title: page.data.title,
     description: page.data.description,
+    other: {
+      "giscus:backlink": `https://renhedata.github.io/ai-lab-smart-office/docs${pagePath}/`,
+    },
   };
 }

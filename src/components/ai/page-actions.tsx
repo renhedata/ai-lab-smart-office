@@ -76,7 +76,7 @@ export function DiscussionButton() {
       )}
     >
       <MessageCircleIcon />
-      参与讨论
+      项目讨论
       <ExternalLinkIcon />
     </a>
   );
