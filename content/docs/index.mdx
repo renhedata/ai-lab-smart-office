@@ -14,16 +14,16 @@ description: 了解智能办公室文档库的导航、搜索、阅读与维护�
 
 ## 维护或推进项目
 
-1. 先阅读[协作与变更流程](/docs/guide/workflow/)，确认这项工作应进入文档、Issue 还是决策记录。
-2. 搜索已有页面和 Issue，避免建立两份相互冲突的记录。
-3. 新增费用、变更设备型号或布线、修改自动化规则、发现现场问题时，先建 Issue。
+1. 先阅读[协作与变更流程](/docs/guide/workflow/)，确认这项工作应进入文档、讨论、Issue 还是决策记录。
+2. 搜索已有页面、[GitHub Discussions](https://github.com/renhedata/ai-lab-smart-office/discussions) 和 Issue，避免建立两份相互冲突的记录。
+3. 需要征求意见、比较思路或分享经验时，发起[项目讨论](/docs/guide/discussions/)；新增费用、变更设备型号或布线、修改自动化规则、发现现场问题时，先建 Issue。
 4. 结论稳定后修改对应的 MDX 文档；有重要取舍时，按[决策记录规范](/docs/guide/decision-log/)在[决策档案](/docs/decisions/)中新建或更新 ADR。
 
 ## 导航和搜索
 
 ### 顶部工具栏
 
-“文档”是当前唯一的内容区。无论通过左侧目录打开哪一页，顶部都会保持在“文档”中。工具栏同时提供全文搜索、显示模式和 GitHub 入口。
+顶部“讨论”会打开项目的 GitHub Discussions；登录 GitHub 后可发帖、回复和关注讨论。工具栏同时提供全文搜索、显示模式和 GitHub 入口。
 
 ### 左侧目录
 
@@ -48,6 +48,7 @@ description: 了解智能办公室文档库的导航、搜索、阅读与维护�
 | 技术方案、实施要求和自动化规则 | `content/docs/implementation/` | 网络与弱电规划、智能化总体方案、自动化场景 |
 | 采购、设备台账、施工与验收 | `content/docs/management/` | 报价选择、资产信息、验收结论 |
 | 网页需要展示或下载的图纸与图表 | `public/` | SVG、PNG、PDF 和 CAD 下载包 |
+| 开放性问题、方案提议和经验交流 | GitHub Discussions | 是否采用某协议、试点建议、使用反馈 |
 | 待决、待做、现场问题或待验收事项 | GitHub Issue | 采购设备、修复 AP 覆盖盲区、场景测试不通过 |
 | 对文档、图纸或配置的可审核变更 | Pull Request | 更新 VLAN 方案、修正点位或补充验收证据 |
 
@@ -65,7 +66,7 @@ description: 了解智能办公室文档库的导航、搜索、阅读与维护�
 
 ### 2. 做：明确责任和验收方式
 
-用 Issue 记录范围、区域或设备编号、负责人、预算或影响、成功标准和相关证据。涉及重要取舍时，在 `content/docs/decisions/` 建立 ADR，并在 Issue 与 ADR 中互相链接。
+用 Issue 记录范围、区域或设备编号、负责人、预算或影响、成功标准和相关证据。需要先收集意见时，在 GitHub Discussions 开始；涉及重要取舍时，在 `content/docs/decisions/` 建立 ADR，并在 Discussion、Issue 与 ADR 中互相链接。
 
 ### 3. 记：让文档与现场重新一致
 
@@ -73,6 +74,6 @@ description: 了解智能办公室文档库的导航、搜索、阅读与维护�
 
 <Callout title="最简单的判断">
 
-查结论，看文档；推任务，建 Issue；改结论，提 Pull Request；做了重要取舍，在 `decisions/` 补 ADR。
+想交流，开 Discussion；推任务，建 Issue；查结论，看文档；做了重要取舍，在 `decisions/` 补 ADR；改结论，提 Pull Request。
 
 </Callout>

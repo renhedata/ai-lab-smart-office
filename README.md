@@ -4,6 +4,8 @@
 
 在线文档：https://renhedata.github.io/ai-lab-smart-office/
 
+项目讨论：https://github.com/renhedata/ai-lab-smart-office/discussions （登录 GitHub 后可发帖和回复）
+
 ## 本地预览
 
 ```bash

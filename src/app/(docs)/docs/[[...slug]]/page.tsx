@@ -10,7 +10,8 @@ import defaultMdxComponents from "fumadocs-ui/mdx";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { LLMCopyButton, ViewOptions } from "@/components/ai/page-actions";
+import { DiscussionButton, LLMCopyButton, ViewOptions } from "@/components/ai/page-actions";
+import { githubRepositoryUrl } from "@/lib/layout.shared";
 import { source } from "@/lib/source";
 
 type PageProps = {
@@ -32,9 +33,10 @@ export default async function Page({ params }: PageProps) {
       <DocsDescription>{page.data.description}</DocsDescription>
       <div className="flex flex-row items-center gap-2 border-b pt-2 pb-6">
         <LLMCopyButton markdownUrl={markdownUrl} />
+        <DiscussionButton />
         <ViewOptions
           markdownUrl={markdownUrl}
-          githubUrl={`https://github.com/renhedata/ai-lab-smart-office/blob/main/content/docs/${page.path}`}
+          githubUrl={`${githubRepositoryUrl}/blob/main/content/docs/${page.path}`}
         />
       </div>
       <DocsBody>

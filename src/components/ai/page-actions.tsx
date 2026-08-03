@@ -6,6 +6,7 @@ import { useCopyButton } from "fumadocs-ui/utils/use-copy-button";
 import { Check, ChevronDown, Copy, ExternalLinkIcon, MessageCircleIcon } from "lucide-react";
 import { useMemo, useState } from "react";
 
+import { githubDiscussionsUrl } from "@/lib/layout.shared";
 import { cn } from "@/lib/utils";
 
 const cache = new Map<string, string>();
@@ -57,6 +58,27 @@ export function LLMCopyButton({
       {checked ? <Check /> : <Copy />}
       Copy Markdown
     </button>
+  );
+}
+
+export function DiscussionButton() {
+  return (
+    <a
+      href={githubDiscussionsUrl}
+      target="_blank"
+      rel="noreferrer noopener"
+      className={cn(
+        buttonVariants({
+          color: "secondary",
+          size: "sm",
+          className: "gap-2 [&_svg]:size-3.5 [&_svg]:text-fd-muted-foreground",
+        }),
+      )}
+    >
+      <MessageCircleIcon />
+      参与讨论
+      <ExternalLinkIcon />
+    </a>
   );
 }
 
