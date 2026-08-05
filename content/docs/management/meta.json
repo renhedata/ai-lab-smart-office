@@ -1,6 +1,6 @@
 {
-  "title": "交付与运维",
+  "title": "采购与验收",
   "defaultOpen": true,
-  "collapsible": true,
+  "collapsible": false,
   "pages": ["procurement", "acceptance"]
 }

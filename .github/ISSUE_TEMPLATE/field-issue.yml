@@ -35,5 +35,4 @@ body:
     id: proposal
     attributes:
       label: 建议处理方案
-      description: 若涉及预算、设备型号或拓扑变化，请关联决策记录。
-
+      description: 若涉及预算、设备型号或拓扑变化，请写清选择理由及对预算、设备或网络的影响。

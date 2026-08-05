@@ -1,21 +1,18 @@
 ---
 title: 协作与变更流程
-description: 用 GitHub 管理办公室智能化项目中的文档、任务和决策。
+description: 用 GitHub 管理办公室智能化项目中的文档、任务和变更。
 ---
 
-## 五个对象
+## 四个对象
 
 | 对象 | 用途 | 示例 |
 | --- | --- | --- |
 | Markdown 文档 | 稳定的方案、规范、记录 | 网络方案、设备台账、运维手册 |
 | GitHub Discussions | 开放式问题、方案提议、经验交流与共识形成 | 讨论传感器协议、征集试点反馈 |
 | GitHub Issue | 一项待决、待做或待验收的工作 | 采购会议室传感器、修复 AP 覆盖盲区 |
-| ADR 决策记录 | 重要选择的背景、取舍、结论和回滚依据 | 选择 IoT 网络隔离方式、确定本地控制策略 |
 | Pull Request | 对文档/配置的可审核变更 | 合并新的 VLAN 规划与交换机配置 |
 
-GitHub Discussions 是项目对话的公开入口。登录 GitHub 后，可在[项目讨论区](https://github.com/renhedata/ai-lab-smart-office/discussions)发起话题或回复；一旦讨论形成具体工作，就建立或关联 Issue；一旦形成重要选择，就归档 ADR。
-
-ADR 是仓库内的 Markdown 文档，但有独立的档案位置：所有实际记录统一放在 [`content/docs/decisions/`](/docs/decisions/)。每份 ADR 关联其 Issue；批准后，方案页、图纸、台账和实施任务再链接回该 ADR。创建方法见[决策记录规范](/docs/guide/decision-log/)。
+GitHub Discussions 是项目对话的公开入口。登录 GitHub 后，可在[项目讨论区](https://github.com/renhedata/ai-lab-smart-office/discussions)发起话题或回复；一旦讨论形成具体工作，就建立或关联 Issue；重要取舍在关联 Issue 中记录依据、影响和最终选择，并同步更新方案、图纸或台账。
 
 ## 推荐状态
 

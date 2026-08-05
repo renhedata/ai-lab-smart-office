@@ -6,6 +6,14 @@
 
 项目讨论：https://github.com/renhedata/ai-lab-smart-office/discussions （登录 GitHub 后可发帖和回复）
 
+## 提建议与贡献
+
+- 针对单篇内容的纠错或补充：在文档末尾的“讨论本文”评论。
+- 跨页面的建议、方案比较或使用反馈：在 GitHub Discussions 发起讨论；有明确负责人和验收条件的工作，再建立 Issue。
+- 修改文档、图纸或配置：Fork 或创建分支后完成修改，运行 `npm run dev` 预览和 `npm run build` 验证，再提交 Pull Request。请说明改动原因、影响范围、关联 Issue 与验证结果。
+
+重要取舍需在关联 Issue 中写清背景、影响与最终选择，并同步更新对应方案；不得提交密码、密钥、门禁凭证、个人信息或未经脱敏的现场资料。
+
 ## 本地预览
 
 ```bash
@@ -35,7 +43,7 @@ python3 -m venv .venv
 
 ## 文档约定
 
-- 方案、设备配置和验收标准应直接维护在 `content/docs/`；每一份重要决策的 ADR 统一放在 `content/docs/decisions/`，规范见 `content/docs/guide/decision-log.mdx`。
+- 方案、设备配置和验收标准应直接维护在 `content/docs/`；重要取舍的依据、影响和最终选择写入关联 Issue，并同步更新对应方案页面。
 - 图纸源文件放 `diagrams/`，并在文档中引用其导出图或链接。
 - 大文件（CAD、视频、扫描件、合同）不提交 Git；保存到 NAS/对象存储，并在相应 Markdown 中放链接和版本号。
 - 任何影响预算、拓扑、施工或自动化逻辑的变更，先创建 Issue，再通过 Pull Request 审核并合并。

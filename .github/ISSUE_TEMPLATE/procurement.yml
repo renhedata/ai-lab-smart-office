@@ -33,5 +33,4 @@ body:
     id: approval
     attributes:
       label: 最终选择与批准记录
-      placeholder: 选择理由、批准人、关联 ADR。
-
+      placeholder: 选择理由、批准人、相关 Issue、Discussion 或 Pull Request 链接。

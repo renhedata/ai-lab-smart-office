@@ -228,13 +228,15 @@ export function ViewOptions({
   return (
     <Popover>
       <PopoverTrigger
-        className={cn(
-          buttonVariants({
-            color: "secondary",
-            size: "sm",
-            className: "gap-2",
-          }),
-        )}
+        className={() =>
+          cn(
+            buttonVariants({
+              color: "secondary",
+              size: "sm",
+              className: "gap-2",
+            }),
+          )
+        }
       >
         Open
         <ChevronDown className="size-3.5 text-fd-muted-foreground" />

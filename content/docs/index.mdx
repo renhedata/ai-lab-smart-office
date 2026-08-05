@@ -1,79 +1,44 @@
 ---
-title: 使用指南
-description: 了解智能办公室文档库的导航、搜索、阅读与维护方法。
+title: 项目资料
+description: 从现状、方案到验收，按项目阶段查看所需资料。
 ---
 
-这个文档库用来连接方案、任务和现场证据。只是查看项目时，按“总览 → 专题 → 验收”阅读；需要推进工作时，按“查现状 → 建 Issue → 更新文档”操作。
+这里只保留项目实施需要的资料。按下面三组阅读即可。
 
-## 只查看项目
+## 项目概览
 
-1. 先看[项目总览](/docs/guide/project-overview/)，了解目标、范围和建议阶段。
-2. 再看[办公室布局](/docs/guide/office-layout/)，确认房间名称、功能分区和图纸边界。
-3. 根据关心的专题进入[当前网络现状](/docs/guide/architecture/)、[智能化总体方案](/docs/implementation/smart-office-plan/)或[自动化场景](/docs/implementation/automation/)。
-4. 需要核对采购和交付时，查看[采购与设备台账](/docs/management/procurement/)和[施工与验收](/docs/management/acceptance/)。
+- [项目总览](/docs/guide/project-overview/)：改造目标、范围和阶段。
+- [办公室布局](/docs/guide/office-layout/)：空间底图和点位边界。
+- [当前网络现状](/docs/guide/architecture/)：现有网络基线。
 
-## 维护或推进项目
+## 方案与实施
 
-1. 先阅读[协作与变更流程](/docs/guide/workflow/)，确认这项工作应进入文档、讨论、Issue 还是决策记录。
-2. 搜索已有页面、[GitHub Discussions](https://github.com/renhedata/ai-lab-smart-office/discussions) 和 Issue，避免建立两份相互冲突的记录。
-3. 需要征求意见、比较思路或分享经验时，发起[项目讨论](/docs/guide/discussions/)；新增费用、变更设备型号或布线、修改自动化规则、发现现场问题时，先建 Issue。
-4. 结论稳定后修改对应的 MDX 文档；有重要取舍时，按[决策记录规范](/docs/guide/decision-log/)在[决策档案](/docs/decisions/)中新建或更新 ADR。
+- [智能化总体方案](/docs/implementation/smart-office-plan/)：照明、窗帘、环境和控制原则。
+- [网络与弱电规划](/docs/implementation/network/)：网络、供电和布线要求。
+- [自动化场景](/docs/implementation/automation/)：场景规则与测试要求。
 
-## 导航和搜索
+## 采购与验收
 
-### 顶部工具栏
+- [采购与设备台账](/docs/management/procurement/)：设备、报价和资产信息。
+- [施工与验收](/docs/management/acceptance/)：施工记录、检查项和交付结论。
 
-顶部“讨论”会打开项目的 GitHub Discussions；登录 GitHub 后可发帖、回复和关注讨论。工具栏同时提供全文搜索、显示模式和 GitHub 入口。
+更新资料时：任务写 Issue，讨论写 Discussion；重要选择的背景、影响和最终结论写入关联 Issue，并同步更新对应方案页面。
 
-### 左侧目录
+## 提建议与贡献
 
-左侧目录按“规划与协作、决策档案、方案与实施、交付与运维”分组。每个分组可以展开或收起；桌面端还可以用顶部的侧栏按钮收起整个目录。
+### 评论某一页
 
-### 本页目录
+页面末尾的“讨论本文”适合补充事实、指出错误或追问具体内容。登录 GitHub 后即可评论；留言会归到当前页面，方便后续追溯。
 
-较长页面会显示“本页目录”，桌面端通常位于右侧。点击二级或三级标题，可直接跳到当前页的对应部分。
+### 提出建议
 
-### 搜索
+跨页面的想法、方案比较和使用反馈，请发到[项目讨论区](https://github.com/renhedata/ai-lab-smart-office/discussions)。说明涉及的区域或系统、当前情况、备选方案，以及希望大家一起决定的问题。讨论形成明确工作后，再建立或关联 Issue。
 
-- 点击页面顶部的“搜索”，或按 `⌘ K`（macOS）/ `Ctrl K`（Windows、Linux）。
-- 输入房间名称、设备类型、协议、场景或任务，例如“D会议室”、“窗帘”、“VLAN”或“验收”。
-- 用方向键切换结果，按 Enter 打开，按 Esc 关闭。
+### 提交贡献
 
-## 内容存放位置
+1. 在[项目仓库](https://github.com/renhedata/ai-lab-smart-office)中 Fork 或创建分支，并先查看相关页面和已有 Issue。
+2. 每个贡献只解决一个明确问题；更新方案、图纸、设备台账或验收记录时，附上可公开的依据和关联 Issue。
+3. 本地运行 `npm run dev` 预览，并执行 `npm run build` 确认静态站点能构建。
+4. 提交 Pull Request，写清改动原因、影响范围和验证结果；涉及预算、施工、网络或长期维护的重要选择，在关联 Issue 中写清依据、影响和最终选择，并更新对应方案页面。
 
-| 信息类型 | 存放位置 | 示例 |
-| --- | --- | --- |
-| 范围、空间、现状和协作规则 | `content/docs/guide/` | 项目总览、办公室布局、当前网络现状、协作流程 |
-| 重要取舍的 ADR 决策记录 | `content/docs/decisions/` | 网络隔离、供电方式、设备协议或控制策略的选择 |
-| 技术方案、实施要求和自动化规则 | `content/docs/implementation/` | 网络与弱电规划、智能化总体方案、自动化场景 |
-| 采购、设备台账、施工与验收 | `content/docs/management/` | 报价选择、资产信息、验收结论 |
-| 网页需要展示或下载的图纸与图表 | `public/` | SVG、PNG、PDF 和 CAD 下载包 |
-| 开放性问题、方案提议和经验交流 | GitHub Discussions | 是否采用某协议、试点建议、使用反馈 |
-| 待决、待做、现场问题或待验收事项 | GitHub Issue | 采购设备、修复 AP 覆盖盲区、场景测试不通过 |
-| 对文档、图纸或配置的可审核变更 | Pull Request | 更新 VLAN 方案、修正点位或补充验收证据 |
-
-<Callout type="warn" title="不要写入仓库">
-
-密码、私钥、令牌、门禁凭证和个人敏感信息不得提交到文档、Issue 或 Pull Request。
-
-</Callout>
-
-## 推进一项工作
-
-### 1. 查：确认现状和边界
-
-先搜索相关房间、设备或系统，阅读现有方案、警告和待确认项。如果文档与现场不一致，先记录差异，不直接把假设当成结论。
-
-### 2. 做：明确责任和验收方式
-
-用 Issue 记录范围、区域或设备编号、负责人、预算或影响、成功标准和相关证据。需要先收集意见时，在 GitHub Discussions 开始；涉及重要取舍时，在 `content/docs/decisions/` 建立 ADR，并在 Discussion、Issue 与 ADR 中互相链接。
-
-### 3. 记：让文档与现场重新一致
-
-完成实施或评审后，更新对应方案、图纸、设备台账和验收记录，关联 Issue 与测试证据。每页标题下方的 GitHub 入口可直接打开源 MDX 文件。
-
-<Callout title="最简单的判断">
-
-想交流，开 Discussion；推任务，建 Issue；查结论，看文档；做了重要取舍，在 `decisions/` 补 ADR；改结论，提 Pull Request。
-
-</Callout>
+不要提交密码、密钥、门禁凭证、个人信息或未经脱敏的现场资料。
