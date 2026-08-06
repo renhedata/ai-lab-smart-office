@@ -31,6 +31,10 @@ npm run build
 
 生成的静态文件在 `out/`，可部署到 GitHub Pages、公司 NAS 或任意 Web 服务器。
 
+## 自动部署
+
+推送到 `main` 会自动安装依赖、构建 `out/`，并发布到 GitHub Pages。也可以在 GitHub Actions 中手动运行“Deploy GitHub Pages”工作流。
+
 ## 生成二维 CAD 底图
 
 ```bash
