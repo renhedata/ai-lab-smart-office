@@ -41,8 +41,8 @@ export function GiscusComments({ pageKey }: { pageKey: string }) {
     script.crossOrigin = "anonymous";
     script.setAttribute("data-repo", "renhedata/ai-lab-smart-office");
     script.setAttribute("data-repo-id", "R_kgDOTo6ovw");
-    script.setAttribute("data-category", "Announcements");
-    script.setAttribute("data-category-id", "DIC_kwDOTo6ov84DCkJg");
+    script.setAttribute("data-category", "General");
+    script.setAttribute("data-category-id", "DIC_kwDOTo6ov84DCkJh");
     script.setAttribute("data-mapping", "pathname");
     script.setAttribute("data-strict", "1");
     script.setAttribute("data-reactions-enabled", "1");

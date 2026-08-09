@@ -1,7 +1,7 @@
 name: 现场问题 / 变更
 description: 记录施工、网络、设备或自动化中的异常与现场变更。
 title: "[现场] "
-labels: ["field", "triage"]
+labels: ["bug"]
 body:
   - type: dropdown
     id: severity
@@ -16,15 +16,15 @@ body:
   - type: input
     id: location
     attributes:
-      label: 区域 / 设备编号
-      placeholder: 例如：会议室 A / AP-MEET-01
+      label: 区域（脱敏）/ 内部工单号
+      placeholder: 例如：D 会议室 / 内部工单 OPS-___
     validations:
       required: true
   - type: textarea
     id: observed
     attributes:
       label: 发现的问题或现场变化
-      description: 包含发生时间、现象、已做操作和照片/日志链接。
+      description: 写发生时间、现象、已做操作和内部证据编号；不要粘贴原始日志、精确网络/资产信息或未脱敏照片。
     validations:
       required: true
   - type: textarea
@@ -35,4 +35,11 @@ body:
     id: proposal
     attributes:
       label: 建议处理方案
-      description: 若涉及预算、设备型号或拓扑变化，请写清选择理由及对预算、设备或网络的影响。
+      description: 若涉及预算、设备或网络边界变化，请写脱敏影响并关联 DEC；精确配置留在内部变更记录。
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我没有提交凭证、个人信息、原始日志、精确网络/资产信息或未脱敏现场资料。
+          required: true

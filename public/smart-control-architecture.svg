@@ -82,6 +82,6 @@
 
   <rect x="45" y="475" width="1305" height="100" rx="16" fill="#0f172a"/>
   <text x="700" y="510" class="label" fill="#ffffff" style="fill:#fff">网络与安全边界</text>
-  <text x="700" y="542" class="small" fill="#cbd5e1" style="fill:#cbd5e1">VLAN 30 自动化服务（建议新增）管理 VLAN 20 IoT；员工网仅访问 HTTPS 控制面板；设备默认不直通互联网</text>
+  <text x="700" y="542" class="small" fill="#cbd5e1" style="fill:#cbd5e1">自动化、IoT、办公与管理区相互隔离；只开放必要方向与协议；设备默认不直通互联网</text>
   <text x="700" y="566" class="small" fill="#94a3b8" style="fill:#94a3b8">消防、应急照明、门禁生命安全功能保持独立，不由普通自动化规则直接控制</text>
 </svg>

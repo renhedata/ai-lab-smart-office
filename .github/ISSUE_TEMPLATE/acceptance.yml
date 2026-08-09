@@ -1,8 +1,15 @@
 name: 验收项
 description: 对已完成的设备、场景或施工项执行验收。
 title: "[验收] "
-labels: ["acceptance", "triage"]
+labels: ["documentation"]
 body:
+  - type: input
+    id: related
+    attributes:
+      label: 关联需求 / 试点 / 变更
+      placeholder: NEED-___ / EXP-___ / CHG-___
+    validations:
+      required: true
   - type: input
     id: scope
     attributes:
@@ -18,10 +25,17 @@ body:
     validations:
       required: true
   - type: textarea
+    id: baseline
+    attributes:
+      label: 基线、目标与实际结果对比
+      description: 不只写设备能否动作；比较任务耗时、误动作、体验、维护量、成本或其他既定指标。
+    validations:
+      required: true
+  - type: textarea
     id: result
     attributes:
       label: 测试过程与结果
-      description: 记录环境、日期、执行人、照片/截图/日志链接。
+      description: 公开记录日期、执行角色、脱敏结果和内部证据编号；原始照片、截图、日志、精确配置留在内部受限系统。
     validations:
       required: true
   - type: dropdown
@@ -34,4 +48,17 @@ body:
         - 不通过
     validations:
       required: true
-
+  - type: textarea
+    id: followup
+    attributes:
+      label: 遗留项与 30/90 天复查
+      description: 写责任角色、关闭日期、复查指标、复查日期和不达标时的回退/退役条件。
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 发布边界确认
+      options:
+        - label: 公开内容不含凭证、个人信息、精确资产/网络信息、原始日志或未脱敏现场资料。
+          required: true

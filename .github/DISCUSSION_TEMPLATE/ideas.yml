@@ -1,0 +1,31 @@
+title: "[共创想法] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先说办公问题，不必先选设备。讨论有结论后，项目协调人会关联 Issue 并更新状态。
+  - type: input
+    id: location
+    attributes:
+      label: 区域 / 使用场景
+      placeholder: 例如：D 会议室演示、开放区长时间静坐
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 现在发生什么
+      description: 说明人、任务、频率、耗时或不适。
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: 希望大家一起回答的问题
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: 已知备选、约束或证据
+      description: 可留空；不要提交凭证、个人信息或未脱敏安全细节。

@@ -8,8 +8,8 @@ export const baseOptions: BaseLayoutProps = {
     title: "AI实验室 · 智能办公室",
   },
   links: [
-    { text: "文档", url: "/docs", active: "nested-url" },
-    { text: "讨论", url: githubDiscussionsUrl, active: "none", external: true },
+    { text: "文档", url: "/docs", active: "url" },
+    { text: "参与共创", url: "/docs/participation", active: "nested-url" },
   ],
   githubUrl: githubRepositoryUrl,
 };

@@ -1,0 +1,19 @@
+title: "[问题] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        不要发布凭证、个人信息、精确资产/网络信息、原始日志或未脱敏现场资料。
+  - type: textarea
+    id: question
+    attributes:
+      label: 你想了解什么
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景与已查看资料
+      description: 涉及哪个区域、系统或文档页？
+    validations:
+      required: true

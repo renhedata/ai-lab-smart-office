@@ -3,7 +3,7 @@ title: 网络与弱电规划
 description: 网络与弱电设计、实施和验收的工作入口，与当前网络现状分开维护。
 ---
 
-本页用于规划尚未实施或正在实施的网络与弱电工作。查看现网链路、VLAN 和策略路由基线，请先读[当前网络现状](/docs/guide/architecture/)。
+本页用于规划尚未实施或正在实施的网络与弱电工作。公开的信任边界和数据流原则见[网络边界与公开架构](/docs/guide/architecture/)；现网链路、地址、VLAN、端口和策略路由基线只在内部受限系统查看。
 
 ## 开工前清单
 
@@ -24,7 +24,13 @@ description: 网络与弱电设计、实施和验收的工作入口，与当前�
 
 ## 智能化网络扩展提案
 
-[智能化总体方案](/docs/implementation/smart-office-plan/)建议新增 VLAN 30 承载 Home Assistant、MQTT 和协议网关，现有 VLAN 20 继续承载 IoT 终端。该网段目前属于设计提案，不代表已在 CCR 和交换机中实施；须完成地址、DHCP、防火墙和回退方案评审后再变更现场网络。
+[智能化总体方案](/docs/implementation/smart-office-plan/)建议将 Home Assistant、MQTT 和协议网关放入独立的“自动化服务区”，与 IoT 设备区、办公区和管理区分开。该分区目前属于设计提案，不代表已经实施；精确 VLAN、地址、DHCP、防火墙和回退方案须在内部 `DEC` / `CHG` 评审后再变更现场网络。
+
+### Matter/Thread 试验边界
+
+Matter 依赖本地 IPv6、mDNS 和组播发现，在 VLAN、组播过滤和 IGMP snooping 环境中可能遇到兼容性问题。第一阶段使用单独测试网，让测试设备、Thread 边界路由器和 Matter 控制器位于相同 VLAN，完成配网、断网控制、重启、OTA 和恢复测试后再评估是否纳入正式网络。Zigbee 和 Thread 使用独立无线适配器，不让同一支无线电在生产环境同时承载两种协议。
+
+参考 [Home Assistant Matter 集成的网络要求](https://www.home-assistant.io/integrations/matter/) 和 [Connect ZBT-2 对单协议无线电的说明](https://www.home-assistant.io/connect/zbt-2/)。
 
 ## 验收证据
 

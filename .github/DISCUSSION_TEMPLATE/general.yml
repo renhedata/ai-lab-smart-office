@@ -1,0 +1,37 @@
+title: "[使用反馈] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这是普通使用问题的 GitHub 入口。这里只提交可公开或已脱敏的信息；原始照片、日志、个人信息和内部安全细节请交内部协调人，并在此引用记录编号。
+  - type: input
+    id: location
+    attributes:
+      label: 区域 / 房间
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: 你观察到什么
+      description: 尽量说明时间、频率、影响和现有处理方式。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你希望变成什么样
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      options:
+        - 故障 / 无法使用
+        - 误动作 / 难以理解
+        - 舒适度 / 环境
+        - 隐私 / 数据疑问
+        - 改进建议
+    validations:
+      required: true

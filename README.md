@@ -4,15 +4,22 @@
 
 在线文档：https://renhedata.github.io/ai-lab-smart-office/
 
+参与共创：https://renhedata.github.io/ai-lab-smart-office/docs/participation/
+
 项目讨论：https://github.com/renhedata/ai-lab-smart-office/discussions （登录 GitHub 后可发帖和回复）
+
+项目当前处于准备期：技术文档是规划基线，不是已批准采购/施工方案。项目协调人、公司内部快速反馈渠道、首个试点负责人和验收人未指定前，不启动试点采购；未经试点结果和推广决策，不启动批量采购。
 
 ## 提建议与贡献
 
+- 不熟悉 GitHub：按[参与共创](https://renhedata.github.io/ai-lab-smart-office/docs/participation/)中的“30 秒反馈”描述问题，通过公司指定的内部渠道提交，由项目协调人脱敏代录。
 - 针对单篇内容的纠错或补充：在文档末尾的“讨论本文”评论。
 - 跨页面的建议、方案比较或使用反馈：在 GitHub Discussions 发起讨论；有明确负责人和验收条件的工作，再建立 Issue。
 - 修改文档、图纸或配置：Fork 或创建分支后完成修改，运行 `npm run dev` 预览和 `npm run build` 验证，再提交 Pull Request。请说明改动原因、影响范围、关联 Issue 与验证结果。
 
-重要取舍需在关联 Issue 中写清背景、影响与最终选择，并同步更新对应方案；不得提交密码、密钥、门禁凭证、个人信息或未经脱敏的现场资料。
+重要取舍需使用 `DEC` 决策记录写清背景、备选、影响、反对意见、回退与复核日，并同步更新对应方案。批准、拒绝、暂缓和退役都保留原因，不删除历史记录。
+
+不得提交密码、密钥、门禁凭证、个人信息或未经脱敏的现场资料。可公开共创资料与精确网络拓扑、资产、现场证据和原始传感器日志应分层存放；公开仓库只保留公开或脱敏内容。
 
 ## 本地预览
 
@@ -43,11 +50,11 @@ python3 -m venv .venv
 .venv/bin/python scripts/generate_office_floorplan.py
 ```
 
-生成的 DXF、CAD ZIP 下载包、SVG、PDF 和 PNG 位于 `public/layout/`。图纸当前为照片转绘初稿，内部尺寸和门窗位置须经现场复核后再修改生成脚本中的坐标。
+生成的 DXF、CAD ZIP 下载包、SVG、PDF 和 PNG 位于 `public/layout/`。图纸当前为照片转绘初稿，内部尺寸和门窗位置须经现场复核；若仓库保持公开，正式坐标、精确点位和可识别现场细节应迁入内部受限系统，公开版本只保留共创所需的示意分区。
 
 ## 文档约定
 
-- 方案、设备配置和验收标准应直接维护在 `content/docs/`；重要取舍的依据、影响和最终选择写入关联 Issue，并同步更新对应方案页面。
-- 图纸源文件放 `diagrams/`，并在文档中引用其导出图或链接。
+- 方案、设备配置和验收标准应直接维护在 `content/docs/`；需求、试点、决策、变更和效果分别使用 `NEED`、`EXP`、`DEC`、`CHG`、`MET` 编号并互相关联。
+- 可公开的示意图源文件放 `diagrams/`；正式坐标、精确网络/点位和施工图只在内部受限系统维护，公开文档引用内部记录编号和脱敏导出图。
 - 大文件（CAD、视频、扫描件、合同）不提交 Git；保存到 NAS/对象存储，并在相应 Markdown 中放链接和版本号。
-- 任何影响预算、拓扑、施工或自动化逻辑的变更，先创建 Issue，再通过 Pull Request 审核并合并。
+- 任何影响预算、网络边界、施工或自动化逻辑的变更，先创建 `DEC` / `CHG`；公开 Pull Request 只审核脱敏结论，精确配置在内部受限流程评审。

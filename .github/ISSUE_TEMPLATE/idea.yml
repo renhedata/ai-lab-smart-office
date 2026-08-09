@@ -1,37 +1,109 @@
-name: 新想法 / 需求
-description: 提出一个智能办公室的改造想法或使用需求。
-title: "[想法] "
-labels: ["idea", "triage"]
+name: 新需求 / 改进想法
+description: 先记录真实场景、频率和影响，再讨论是否需要技术方案。
+title: "[需求] "
+labels: ["enhancement"]
 body:
-  - type: textarea
-    id: background
+  - type: markdown
     attributes:
-      label: 场景与问题
-      description: 谁在什么场景下遇到了什么问题？
-      placeholder: 例如：会议结束后经常忘记关闭显示屏和照明。
+      value: |
+        不必先知道设备或协议。请尽量写清“在什么场景下，现在发生什么，希望变成什么”。
+  - type: input
+    id: location
+    attributes:
+      label: 区域 / 房间
+      placeholder: 例如：D 会议室、A 大厅1、全体办公区
     validations:
       required: true
   - type: textarea
-    id: proposal
+    id: problem
     attributes:
-      label: 初步设想
-      description: 期望的解决方式、涉及区域和设备。
+      label: 真实场景与问题
+      description: 谁在什么时候做什么，现在会发生什么？
+      placeholder: 例如：开会人员进入 D 会议室后，通常要分别找灯、窗帘和屏幕遥控器。
+    validations:
+      required: true
   - type: dropdown
     id: system
     attributes:
-      label: 系统类别
+      label: 主要涉及哪一类
       options:
-        - 网络与弱电
-        - 照明与环境
-        - 会议与影音
-        - 安防与门禁
-        - 自动化平台
-        - 其他
+        - 照明 / 窗帘
+        - 温度 / 通风 / 空气质量
+        - 会议 / 显示 / 音视频
+        - 网络 / 设备 / 自动化
+        - 空间 / 家具 / 工作流程
+        - 门禁 / 安防 / 安全
+        - 数据 / 隐私
+        - 其他 / 不确定
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 发生频率
+      options:
+        - 几乎每天
+        - 每周多次
+        - 每月几次
+        - 偶尔
+        - 第一次 / 尚待核实
+    validations:
+      required: true
+  - type: dropdown
+    id: breadth
+    attributes:
+      label: 大约影响谁
+      options:
+        - 全公司或多个团队
+        - 一个团队 / 一个公共区域
+        - 少数固定使用者
+        - 目前只能确认我自己
     validations:
       required: true
   - type: textarea
-    id: acceptance
+    id: workaround
     attributes:
-      label: 成功标准
-      description: 如何判断这个想法已经真正解决问题？
-
+      label: 现在怎么处理
+      description: 现有做法是什么？大约多花多少时间，或带来什么不便？
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 可复核的事实
+      description: 可填写发生日期、次数、耗时、工单或脱敏照片/记录链接；没有时可先留空。
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 可选：你想到的办法
+      description: 可以写不改造、改流程、简单设备或自动化方案；也可以不写。
+  - type: textarea
+    id: success
+    attributes:
+      label: 怎样才算真正改善
+      description: 尽量用可观察的结果，例如耗时、误动作、舒适度、故障数或人工覆盖率。
+    validations:
+      required: true
+  - type: dropdown
+    id: data
+    attributes:
+      label: 这个想法可能需要哪类数据
+      options:
+        - 不需要新数据 / 不确定
+        - 温湿度、CO₂、照度、能耗等环境数据
+        - 只记录区域是否有人的聚合数据
+        - 可能涉及门禁、位置、录音、摄像、人脸或其他个人信息
+    validations:
+      required: true
+  - type: textarea
+    id: fallback
+    attributes:
+      label: 人工替代与失败影响
+      description: 方案停机、断网或误动作时，现有工作是否还能继续？
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我没有提交密码、令牌、门禁凭证、未脱敏个人信息或内部安全细节。
+          required: true

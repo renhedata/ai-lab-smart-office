@@ -1,0 +1,74 @@
+name: 试点执行反馈（项目组）
+description: 已有试点记录后，报告故障、误动作、体验或隐私问题；普通反馈请先到 Discussion。
+title: "[试点反馈] "
+body:
+  - type: input
+    id: related
+    attributes:
+      label: 关联试点 / 工作记录
+      placeholder: EXP-___ / Issue #___
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: 脱敏区域 / 房间
+      placeholder: 例如：D 会议室；精确资产编号只放内部记录
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: 反馈类型
+      options:
+        - 无法使用 / 故障
+        - 误动作 / 规则抢回控制
+        - 太热、太冷、太亮、太暗、太闷或噪声
+        - 操作难理解 / 找不到手动方式
+        - 隐私 / 数据使用疑问
+        - 改进建议
+    validations:
+      required: true
+  - type: input
+    id: time
+    attributes:
+      label: 发生时间
+      placeholder: 例如：2026-08-09 14:30 左右
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: 当时在做什么，实际发生了什么
+      description: 只写你观察到的事实；不知道技术原因也可以提交。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你希望它怎样工作
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: 影响
+      options:
+        - 有安全风险或阻断正常工作
+        - 明显影响使用，需尽快处理
+        - 不舒服或浪费时间，但可以继续工作
+        - 轻微建议 / 可纳入后续优化
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 可选证据
+      description: 填内部证据编号或可公开的脱敏材料；不要上传原始日志、精确资产/网络信息、人脸、聊天内容、凭证或未脱敏现场资料。
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我没有提交凭证、未脱敏个人信息、原始日志、精确资产/网络信息或未脱敏现场资料。
+          required: true
