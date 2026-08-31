@@ -1,6 +1,6 @@
 ## 为什么要改
 
-关联 NEED / EXP / DEC / CHG / Issue：
+关联方案 Issue：
 
 ## 改了什么
 

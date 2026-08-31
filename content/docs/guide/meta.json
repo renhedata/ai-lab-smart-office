@@ -1,13 +1,10 @@
 {
-  "title": "项目与协作",
-  "defaultOpen": true,
+  "title": "项目资料",
+  "defaultOpen": false,
   "collapsible": true,
   "pages": [
     "project-overview",
     "office-layout",
-    "architecture",
-    "workflow",
-    "discussions",
-    "collaboration-example"
+    "architecture"
   ]
 }

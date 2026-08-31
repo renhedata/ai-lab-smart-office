@@ -1,52 +1,27 @@
 ---
-title: 项目入口
-description: 参与智能办公室共创，查看现状、方案、试点、决策与验收记录。
+title: 方案库
+description: 查看已经整理好的智能办公室方案和实施资料。
 ---
 
-这里不只放技术方案，也要让每一条员工反馈都能被收到、核实、试验和回应。项目的默认判断标准是：是否真正改善工作，是否可靠、可维护、可回退，而不是联动看起来有多酷。
+这里保存已经整理好的方案。当前内容是规划稿，不代表已经采购或施工；每篇方案顶部会注明状态。
 
-## 先从这里开始
+## 智能办公室方案
 
-- [参与共创](/docs/participation/)：提使用问题、发起讨论、参加试点，了解响应时限和隐私边界。
-- [需求、试点与决策记录](/docs/management/records/)：查看实用性门槛、评分、试点卡和决策记录规则。
-- [项目讨论区](https://github.com/renhedata/ai-lab-smart-office/discussions)：对跨页面的方案、经验和问题开放讨论。
+- [智能化总体方案](/docs/implementation/smart-office-plan/)：照明、窗帘、环境和本地控制。
+- [网络与弱电规划](/docs/implementation/network/)：网络分区、供电和布线。
+- [自动化场景](/docs/implementation/automation/)：控制顺序、回退方式和测试。
 
-## 项目概览
+## 项目资料
 
 - [项目总览](/docs/guide/project-overview/)：改造目标、范围和阶段。
 - [办公室布局](/docs/guide/office-layout/)：空间底图和点位边界。
 - [当前网络现状](/docs/guide/architecture/)：现有网络基线。
-- [协作与变更流程](/docs/guide/workflow/)：讨论、任务、变更和稳定文档如何闭环。
 
-## 方案与实施
+## 实施资料
 
-- [智能化总体方案](/docs/implementation/smart-office-plan/)：照明、窗帘、环境和控制原则。
-- [网络与弱电规划](/docs/implementation/network/)：网络、供电和布线要求。
-- [自动化场景](/docs/implementation/automation/)：场景规则与测试要求。
-
-## 记录、采购与验收
-
-- [需求、试点与决策记录](/docs/management/records/)：从问题到上线后复查的追踪链。
 - [采购与设备台账](/docs/management/procurement/)：设备、报价和资产信息。
 - [施工与验收](/docs/management/acceptance/)：施工记录、检查项和交付结论。
 
-更新资料时：开放问题写 Discussion，需执行或验收的工作写 Issue，稳定结论通过 Pull Request 进入文档。批准、拒绝、暂缓和退役都保留依据，不用删除记录代替决策。
+## 提供方案
 
-## 提建议与贡献
-
-### 评论某一页
-
-页面末尾的“讨论本文”适合补充事实、指出错误或追问具体内容。登录 GitHub 后即可评论；留言会归到当前页面，方便后续追溯。
-
-### 提出建议
-
-先阅读[参与共创](/docs/participation/)，用“场景—发生什么—频率—影响—期望”描述问题。不必知道设备或协议；项目组有责任把问题核实、比较简单做法与技术做法，并回应结果。
-
-### 提交贡献
-
-1. 在[项目仓库](https://github.com/renhedata/ai-lab-smart-office)中 Fork 或创建分支，并先查看相关页面和已有 Issue。
-2. 每个贡献只解决一个明确问题；更新方案、图纸、设备台账或验收记录时，附上可公开的依据和关联 Issue。
-3. 本地运行 `npm run dev` 预览，并执行 `npm run build` 确认静态站点能构建。
-4. 提交 Pull Request，写清改动原因、影响范围和验证结果；涉及预算、施工、网络或长期维护的重要选择，在关联 Issue 中写清依据、影响和最终选择，并更新对应方案页面。
-
-不要提交密码、密钥、门禁凭证、个人信息或未经脱敏的现场资料。
+有新的做法时，直接[填写方案表单](https://github.com/renhedata/ai-lab-smart-office/issues/new?template=idea.yml)。只需说明要解决的问题和你的方案，不需要会写代码或文档。项目组确认后会整理到方案库。

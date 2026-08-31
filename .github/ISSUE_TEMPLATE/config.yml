@@ -1,8 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 参与共创指南
-    url: https://renhedata.github.io/ai-lab-smart-office/docs/participation/
-    about: 先看如何提问题、参加试点，以及项目组的回应承诺。
-  - name: 开放讨论区
-    url: https://github.com/renhedata/ai-lab-smart-office/discussions
-    about: 还没有形成具体任务时，先讨论问题和备选方向。
+  - name: 查看方案库
+    url: https://renhedata.github.io/ai-lab-smart-office/docs/
+    about: 提交前可以先看看已有方案。
