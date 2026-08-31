@@ -1,52 +1,58 @@
 import { Card, Cards } from "fumadocs-ui/components/card";
-import { BookOpen, ClipboardCheck, DraftingCompass, MessageSquare } from "lucide-react";
+import { ArrowRight, Lightbulb, Network, Workflow } from "lucide-react";
 import type { Metadata } from "next";
+
+import { githubNewSolutionUrl } from "@/lib/layout.shared";
 
 export const metadata: Metadata = {
   title: {
     absolute: "AI实验室 · DIY 智能办公室",
   },
-  description:
-    "AI实验室智能办公室共创项目入口：提交真实需求，参加试点，查看方案、决策与验收记录。",
+  description: "查看已经整理好的智能办公室方案，或通过简单表单提供新方案。",
 };
 
 export default function HomePage() {
   return (
     <>
-      <section className="mx-auto w-full max-w-4xl px-4 py-16 sm:py-24">
-        <p className="mb-4 text-sm font-medium text-fd-primary">AI 实验室 · 办公室改造项目</p>
-        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">DIY 智能办公室</h1>
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-fd-muted-foreground">
-          从真实办公问题出发，让每位同事都能提建议、看处理结果、参加试点；
-          只把经过验证、可维护、可回退的方案推广。
+      <section className="mx-auto w-full max-w-4xl px-4 pt-12 pb-10 sm:pt-16">
+        <p className="mb-3 text-sm font-medium text-fd-primary">AI 实验室 · 办公室改造</p>
+        <h1 className="text-3xl font-semibold tracking-normal sm:text-4xl">智能办公室方案库</h1>
+        <p className="mt-4 max-w-2xl text-base leading-7 text-fd-muted-foreground">
+          这里保存已经整理好的方案。你有更简单或更合适的做法，直接填写方案表单即可。
         </p>
+        <a
+          href={githubNewSolutionUrl}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="mt-6 inline-flex min-h-10 items-center gap-2 rounded-md bg-fd-primary px-4 py-2 text-sm font-medium text-fd-primary-foreground hover:opacity-90"
+        >
+          提供方案
+          <ArrowRight className="size-4" aria-hidden="true" />
+        </a>
       </section>
 
-      <section className="mx-auto w-full max-w-4xl px-4 pb-16">
+      <section className="mx-auto w-full max-w-4xl px-4 pb-16" aria-labelledby="solutions-title">
+        <h2 id="solutions-title" className="mb-4 text-xl font-semibold tracking-normal">
+          已收录方案
+        </h2>
         <Cards>
           <Card
-            href="/docs/participation/"
-            icon={<MessageSquare />}
-            title="参与共创"
-            description="提问题、参加讨论或报名试点。"
-          />
-          <Card
-            href="/docs/guide/project-overview/"
-            icon={<BookOpen />}
-            title="项目概览"
-            description="目标、办公室布局和现有网络。"
-          />
-          <Card
             href="/docs/implementation/smart-office-plan/"
-            icon={<DraftingCompass />}
-            title="方案与实施"
-            description="智能化、网络和自动化设计。"
+            icon={<Lightbulb />}
+            title="智能化总体方案"
+            description="照明、窗帘、环境与本地控制。"
           />
           <Card
-            href="/docs/management/records/"
-            icon={<ClipboardCheck />}
-            title="记录与验收"
-            description="需求、试点、决策、台账和交付证据。"
+            href="/docs/implementation/network/"
+            icon={<Network />}
+            title="网络与弱电"
+            description="网络分区、供电、布线与验收。"
+          />
+          <Card
+            href="/docs/implementation/automation/"
+            icon={<Workflow />}
+            title="自动化场景"
+            description="控制顺序、回退方式与测试。"
           />
         </Cards>
       </section>

@@ -1,6 +1,6 @@
 {
-  "title": "记录、采购与验收",
-  "defaultOpen": true,
+  "title": "实施资料",
+  "defaultOpen": false,
   "collapsible": true,
-  "pages": ["records", "procurement", "acceptance"]
+  "pages": ["procurement", "acceptance"]
 }

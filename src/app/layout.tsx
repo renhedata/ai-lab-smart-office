@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: "AI实验室 · DIY 智能办公室",
     template: "%s | AI实验室 · 智能办公室",
   },
-  description: "从现状、设计、实施到验收维护的智能办公室项目文档。",
+  description: "已经整理好的智能办公室方案和实施资料。",
   icons: {
     icon: "/ai-lab-smart-office/favicon.svg",
   },
